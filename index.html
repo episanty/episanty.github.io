@@ -1,0 +1,100 @@
+<html> 
+<head> 
+<title>Supplementary Information</title> 			
+
+<!-- X3DOM inclusions -->
+<script type='text/javascript' src='http://www.x3dom.org/download/x3dom.js'></script> 
+<link rel='stylesheet' type='text/css' href='http://www.x3dom.org/download/x3dom.css'></link> 
+
+<style type="text/css">
+#central-column { 
+  background-color: #fffff;
+  width: 900px;
+  margin: 0px auto;
+  height: 100%;
+  text-align: left;
+  padding-bottom: 150px;
+  }
+#content {
+  margin-top: 50px;    
+  margin-left: 30px;
+  width: 800px;
+  }
+body {
+  background: #ffffff url(images/background.png) no-repeat scroll center top;
+  color: #303030;
+  font-family: Helvetica,Tahoma,sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-size: 84%;
+  font-size-adjust: none;
+  font-stretch: normal;
+  line-height: 1.4em;
+}
+x3d{
+  background: rgba(240, 240, 240, 0.4);
+}
+.viewpoint-buttons{
+  margin: 15px 0;
+  display: inline-block;
+}
+
+.figure-description{
+  padding-bottom: 10px;
+}
+
+#figure-s4{
+  padding-bottom: 400px;
+}
+
+#footer{
+  padding-bottom: 10px;
+}
+</style>
+
+<script type="text/javascript" >
+function setViewPoint(figureId,viewPointId) {
+	document.getElementById(figureId+'-'+'undefined').setAttribute('set_bind','true');  // To allow re-setting of viewpoints
+	document.getElementById(figureId+'-'+viewPointId).setAttribute('set_bind','true');
+}
+
+function toggleS4PlotRange() {
+   if (document.getElementById('S3switcherForS4PlotRange').getAttribute('whichChoice')==1) {
+   	showS4PlotRange();
+   } else {
+   	hideS4PlotRange();
+	}
+}
+function showS4PlotRange() {
+   document.getElementById('S3switcherForS4PlotRange').setAttribute('whichChoice','0');
+   document.getElementById('S3InnerBoxToggleButton').firstChild.data = "Hide Fig. S4 range";
+}
+function hideS4PlotRange() {
+   document.getElementById('S3switcherForS4PlotRange').setAttribute('whichChoice','1');
+   document.getElementById('S3InnerBoxToggleButton').firstChild.data = "Show Fig. S4 range";
+}
+</script>
+</head> 
+
+<body>
+<div id="central-column">
+<div id="content">
+
+    
+<h1>Supplementary Information</h1>
+
+<div id="navigation-instructions">
+<div id="navigation-title">
+  <h3>Navigation <!-- <img src="images/iconExpand.gif" /> --></h3>
+</div>
+<div id="navigation-content">
+Use the left mouse button to rotate the object and the middle mouse button to pan. Zoom with the mouse wheel or the right mouse button. Double click to set the center of rotation.
+</div>
+</div>
+
+
+</div><!-- #central-column -->
+</div><!-- #content -->
+</body>
+</html>
