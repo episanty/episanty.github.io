@@ -74,6 +74,18 @@ function hideS4PlotRange() {
    document.getElementById('S3switcherForS4PlotRange').setAttribute('whichChoice','1');
    document.getElementById('S3InnerBoxToggleButton').firstChild.data = "Show Fig. S4 range";
 }
+
+var s4ActiveCycle;
+s4ActiveCycle=5;
+
+function s4saddleBcycle(){
+   if (s4ActiveCycle==5){
+      s4ActiveCycle=2;
+   } else {
+      s4ActiveCycle=s4ActiveCycle+1;
+   };
+   setViewPoint('S4','saddle-2-'+s4ActiveCycle);
+}
 </script>
 </head> 
 
@@ -86,7 +98,7 @@ function hideS4PlotRange() {
 
 <div id="navigation-instructions">
 <div id="navigation-title">
-  <h3>Navigation <!-- <img src="images/iconExpand.gif" /> --></h3>
+  <h3>Navigation</h3>
 </div>
 <div id="navigation-content">
 Use the left mouse button to rotate the object and the middle mouse button to pan. Zoom with the mouse wheel or the right mouse button. Double click to set the center of rotation.
@@ -249,10 +261,11 @@ Soft recollisions, on the other hand, require a more detailed view which we show
   <button onclick="setViewPoint('S4','saddle-1-2');">2</button>
   Saddle B: 
   <button onclick="setViewPoint('S4','saddle-2-1');">1</button>
-  <button onclick="setViewPoint('S4','saddle-2-2');">2</button>
-  <button onclick="setViewPoint('S4','saddle-2-3');">3</button>
-  <button onclick="setViewPoint('S4','saddle-2-4');">4</button>
-  <button onclick="setViewPoint('S4','saddle-2-5');">5</button>
+  <button onclick="setViewPoint('S4','saddle-2-2');s4ActiveCycle=2;">2</button>
+  <button onclick="setViewPoint('S4','saddle-2-3');s4ActiveCycle=3;">3</button>
+  <button onclick="setViewPoint('S4','saddle-2-4');s4ActiveCycle=4;">4</button>
+  <button onclick="setViewPoint('S4','saddle-2-5');s4ActiveCycle=5;">5</button>
+  <button onclick="s4saddleBcycle();">Cycle 2-5</button>
 </div>
 <div class="figure-description" id="figure-s4-description">
 <p>
