@@ -185,7 +185,7 @@ This Supplementary Information should work on Firefox and Chrome. It is faster t
 <div class="figure-description" id="figure-s1-description">
 This is a 3D version of Figure 8 in the main text, which shows the classical closest-approach times as a surface in $(\omega t,p_x,p_z)$ space. 
 Note in particular that the red parts of the surface, which represent maxima of $\vbr^2$, always face towards the left (towards negative t), 
-whereas the green parts of the surface are $\vbr^2$ minima and always face towards the right (towards positive t).
+whereas the green parts of the surface are $\vbr^2$ minima and always face towards the right (towards positive $t$).
 </div>
 </div> 
 
@@ -246,14 +246,14 @@ while red (blue) points have positive (negative) imaginary parts.
 </x3d>
 </div>
 <div class="viewpoint-buttons">
-  <button onclick="setViewPoint('S3','re-im');">pz projection</button>
-  <button onclick="setViewPoint('S3','re-pz');">Im(wt) projection</button>
+  <button onclick="setViewPoint('S3','re-im');">$p_z$ projection</button>
+  <button onclick="setViewPoint('S3','re-pz');">$\Im(\omega t)$ projection</button>
   <button onclick="setViewPoint('S3','gap');">Lobe structure</button>
   <button onclick="setViewPoint('S3','soft-recollision');">Soft recollision</button>
   <button onclick="toggleS4PlotRange()" id="S3InnerBoxToggleButton">Show Fig. S4 range</button>
 </div>
 <div class="figure-description" id="figure-s3-description">
-The quantum times of closest approach form a two-dimensional surface within the four-dimensional space $(\Re(\omega t),\Im(\omega t),p_z)$. 
+The quantum times of closest approach form a two-dimensional surface within the four-dimensional space $(p_x,p_z,\Re(\omega t),\Im(\omega t))$. 
 Here we show a projection onto the three-dimensional space $(\Re(\omega t),\Im(\omega t),p_z)$, which yields Figure 11(a) of the main text if $p_z$ is projected out. 
 (The colour scale follows the scheme of Figure 11(a).)
 Some solutions, however, are mostly real are not discerned in this view; instead, they are visible by projecting out $\Im(\omega t)$.
@@ -296,7 +296,7 @@ Soft recollisions, on the other hand, require a more detailed view, which we sho
   <button onclick="setViewPoint('S4','s3-match');setViewPoint('S3','soft-recollision');showS4PlotRange()">Fig. S3 view</button>
   <button onclick="setViewPoint('S4','side');">Side</button>
   <button onclick="setViewPoint('S4','top');">Top</button>
-  <button onclick="setViewPoint('S4','re-im');">pz projection</button>
+  <button onclick="setViewPoint('S4','re-im');">$p_z$ projection</button>
   Saddle A: 
   <button onclick="setViewPoint('S4','saddle-1-1');">1</button>
   <button onclick="setViewPoint('S4','saddle-1-2');">2</button>
