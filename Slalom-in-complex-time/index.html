@@ -1,0 +1,354 @@
+<html> 
+<head> 
+<title>Supplementary Information</title> 			
+
+<!-- X3DOM inclusions -->
+<script type='text/javascript' src='http://www.x3dom.org/download/x3dom.js'></script> 
+<link rel='stylesheet' type='text/css' href='http://www.x3dom.org/download/x3dom.css'></link> 
+
+<!-- MathJax -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> 
+
+<!-- Google analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-63301935-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<style type="text/css">
+#central-column { 
+  background-color: #fffff;
+  width: 900px;
+  margin: 0px auto;
+  height: 100%;
+  text-align: left;
+  padding-bottom: 150px;
+  }
+#content {
+  margin-top: 50px;    
+  margin-left: 30px;
+  width: 800px;
+  }
+body {
+  background: #ffffff url(images/background.png) no-repeat scroll center top;
+  color: #303030;
+  font-family: Helvetica,Tahoma,sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-size: 84%;
+  font-size-adjust: none;
+  font-stretch: normal;
+  line-height: 1.4em;
+}
+x3d{
+  background: rgba(240, 240, 240, 0.4);
+}
+.viewpoint-buttons{
+  margin: 15px 0;
+  display: inline-block;
+}
+
+.figure-description{
+  padding-bottom: 10px;
+}
+
+#figure-s4{
+  padding-bottom: 400px;
+}
+
+#footer{
+  padding-bottom: 10px;
+}
+
+#mathjax-own-commands{
+  display: none;
+}
+</style>
+
+
+
+<script type="text/javascript" >
+function setViewPoint(figureId,viewPointId) {
+	document.getElementById(figureId+'-'+'undefined').setAttribute('set_bind','true');  // To allow re-setting of viewpoints
+	document.getElementById(figureId+'-'+viewPointId).setAttribute('set_bind','true');
+}
+
+function toggleS4PlotRange() {
+   if (document.getElementById('S3switcherForS4PlotRange').getAttribute('whichChoice')==1) {
+   	showS4PlotRange();
+   } else {
+   	hideS4PlotRange();
+	}
+}
+function showS4PlotRange() {
+   document.getElementById('S3switcherForS4PlotRange').setAttribute('whichChoice','0');
+   document.getElementById('S3InnerBoxToggleButton').firstChild.data = "Hide Fig. S4 range";
+}
+function hideS4PlotRange() {
+   document.getElementById('S3switcherForS4PlotRange').setAttribute('whichChoice','1');
+   document.getElementById('S3InnerBoxToggleButton').firstChild.data = "Show Fig. S4 range";
+}
+
+var s4ActiveCycle;
+s4ActiveCycle=5;
+
+function s4saddleBcycle(){
+   if (s4ActiveCycle==5){
+      s4ActiveCycle=2;
+   } else {
+      s4ActiveCycle=s4ActiveCycle+1;
+   };
+   setViewPoint('S4','saddle-2-'+s4ActiveCycle);
+}
+</script>
+
+
+
+</head> 
+
+<body>
+
+<!-- MathJax own commands -->
+<div id="mathjax-own-commands">
+$$
+\newcommand{\vb}[1]{\mathbf{#1}}
+  \newcommand{\vbv}{\vb{v}}
+  \newcommand{\vbr}{\vb{r}}
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+$$
+</div>
+
+
+<div id="central-column">
+<div id="content">
+
+
+
+
+    
+<h1>Supplementary Information</h1>
+<div id="introduction">
+<p>
+This page is supplementary information to the paper <em>Slalom in complex time: emergence of low-energy structures in tunnel ionization via complex time contours</em>, by E. Pisanty and M. Ivanov.
+If this document is too slow try <a href="" >downloading a copy for local use</a>.
+</p>
+<p>
+You should see four manipulatable 3D figures below. This document uses WebGL and X3DOM to run and should work on recent versions of Chrome, Firefox, Safari and Internet Explorer.
+(To use Chrome to view local copies you should <a href="http://www.chrome-allow-file-access-from-file.com/">allow access local files</a>.)
+To check whether your browser supports X3DOM <a href="http://www.x3dom.org/check/" >click here</a>; for more browser information <a href="http://www.x3dom.org/contact/" >see here</a>.
+</p>
+</div>
+
+
+<div id="navigation-instructions">
+<div id="navigation-title">
+  <h3>Navigation</h3>
+</div>
+<div id="navigation-content">
+Use the left mouse button to rotate the object and the middle mouse button to pan. Zoom with the mouse wheel or the right mouse button. Double click to set the center of rotation.
+</div>
+</div>
+
+
+
+<div class="figure-container" id="figure-s1">
+<div class="figure-title" id="figure-s1-title">
+  <h2>Figure S1</h2>
+</div>
+<div class="3dfigure" id="figure-s1-figure">
+<x3d width='800px' height='500px'>
+  <scene>
+   <Viewpoint id="S1-side" position="0. -9. 0.7" orientation="1. 0. 0. 1.5707"  description="camera"></Viewpoint>
+   <Viewpoint id="S1-end" position="8 0. 0.55" orientation="0.6 0.6 0.6 2.09439" description="camera"></Viewpoint>
+   <Viewpoint id="S1-red" position="-3.2 -1.2 -0.15" orientation="0.8 -0.5 -0.4 1.8" centerOfRotation="0 0 0.08" description="camera"></Viewpoint>
+   <Viewpoint id="S1-undefined"></Viewpoint>
+   <PointLight id='point' on='TRUE' intensity='0.9000' color='0.0 0.6 0.0' location='0 10 0.5 ' radius='5.0000' >  </PointLight>
+   <transform translation='-4.,0,0' scale='0.62 1. 1.'>
+     <Inline url="figureSA.x3d" />
+   </transform>
+  </scene>
+</x3d>
+</div>
+<div class="viewpoint-buttons">
+  <button onclick="setViewPoint('S1','side');">Side</button>
+  <button onclick="setViewPoint('S1','end');">End</button>
+  <button onclick="setViewPoint('S1','red');">Red sides</button>
+</div>
+<div class="figure-description" id="figure-s1-description">
+This is a 3D version of Figure 8 in the main text, which shows the classical closest-approach times as a surface in $(\omega t,p_x,p_z)$ space. 
+Note in particular that the red parts of the surface, which represent maxima of $\vbr^2$, always face towards the left (towards negative t), 
+whereas the green parts of the surface are $\vbr^2$ minima and always face towards the right (towards positive $t$).
+</div>
+</div> 
+
+
+ 
+<div class="figure-container" id="figure-s2">
+<div class="figure-title" id="figure-s2-title">
+  <h2>Figure S2</h2>
+</div>
+<div class="3dfigure" id="figure-s2-figure">
+<x3d width='800px' height='500px'>
+  <scene>
+   <Viewpoint id="S2-side" position="0. -8.5 2.7" orientation="1. 0. 0. 1.3"  description="camera"></Viewpoint>
+   <Viewpoint id="S2-undefined"></Viewpoint>
+   <transform translation='-4.,0,0' scale='0.62 1. 1.'>
+     <Inline url="figureSB.x3d" />
+   </transform>
+  </scene>
+</x3d>
+</div>
+<div class="viewpoint-buttons">
+  <button onclick="setViewPoint('S2','side');">Reset view</button>
+</div>
+<div class="figure-description" id="figure-s2-description">
+This is a 3D version of Figure 10 in the main text, which shows the quantum, complex-valued closest-approach times on the 
+three-dimensional space $(\Re(\omega t),p_x,p_z)$. The imaginary part $\Im(\omega t)$ is denoted by the colour: black points are mostly real, 
+while red (blue) points have positive (negative) imaginary parts. 
+</div>
+</div> 
+
+
+
+
+<div class="figure-container" id="figure-s3">
+<div class="figure-title" id="figure-s3-title">
+  <h2>Figure S3</h2>
+</div>
+<div class="3dfigure" id="figure-s3-figure">
+<x3d width='800px' height='500px'>
+  <scene>
+   <Viewpoint id="S3-re-im" position="0. 0. 11." orientation="0. 0. 1. 0"  description="camera"></Viewpoint>
+   <Viewpoint id="S3-re-pz" position="0. -11. 0." orientation="1. 0. 0. 1.57"  description="camera"></Viewpoint>
+   <Viewpoint id="S3-gap" position="-1.8 5. 1.31" orientation="-0.22 0.69 0.7 3.75"  centerOfRotation="2.9 -0.15 1.0" description="camera"></Viewpoint>
+   <Viewpoint id="S3-soft-recollision" position="0.4 -3.5 1.3" orientation="1. -0.2 -0.15 1.26" centerOfRotation="1.63 0. 0.12" description="camera"></Viewpoint>
+	<Viewpoint id="S3-undefined"></Viewpoint>
+   <transform translation='-4.7,0,0' scale='1. 1. 1.61'>
+      <Switch whichChoice="1" id="S3switcherForS4PlotRange">
+      <Shape>
+        <Appearance> <Material emissiveColor='0.5 0.5 0.5'/> </Appearance>
+		  <IndexedLineSet coordIndex='0 1 2 3 0 -1 4 5 6 7 4 -1 0 4 -1 1 5 -1 2 6 -1 3 7 -1'>
+		    <Coordinate point='5. 1. 0.25, 8. 1. 0.25, 8. 1. -0.25, 5. 1. -0.25, 5. -1. 0.25, 8. -1. 0.25, 8. -1. -0.25, 5. -1. -0.25' />
+		  </IndexedLineSet> 
+		</Shape>
+      </Switch>
+      <Inline url="figureSC.x3d" /> 
+   </transform>
+  </scene>
+</x3d>
+</div>
+<div class="viewpoint-buttons">
+  <button onclick="setViewPoint('S3','re-im');">$p_z$ projection</button>
+  <button onclick="setViewPoint('S3','re-pz');">$\Im(\omega t)$ projection</button>
+  <button onclick="setViewPoint('S3','gap');">Lobe structure</button>
+  <button onclick="setViewPoint('S3','soft-recollision');">Soft recollision</button>
+  <button onclick="toggleS4PlotRange()" id="S3InnerBoxToggleButton">Show Fig. S4 range</button>
+</div>
+<div class="figure-description" id="figure-s3-description">
+The quantum times of closest approach form a two-dimensional surface within the four-dimensional space $(p_x,p_z,\Re(\omega t),\Im(\omega t))$. 
+Here we show a projection onto the three-dimensional space $(\Re(\omega t),\Im(\omega t),p_z)$, which yields Figure 11(a) of the main text if $p_z$ is projected out. 
+(The colour scale follows the scheme of Figure 11(a).)
+Some solutions, however, are mostly real are not discerned in this view; instead, they are visible by projecting out $\Im(\omega t)$.
+Other features of this surface, like the internal structure of the first bounded lobe, require more complex perspectives.
+Soft recollisions, on the other hand, require a more detailed view, which we show in Figure S4.
+</div>
+</div>
+
+
+
+
+<div class="figure-container" id="figure-s4">
+<div class="figure-title" id="figure-s4-title">
+  <h2>Figure S4</h2>
+</div>
+
+<div class="3dfigure" id="figure-s4-figure">
+<x3d width='800px' height='500px'>
+  <scene>
+   <Viewpoint id="S4-s3-match" position="-1.8 -3.16 2.0" orientation="0.9 -0.3 -0.35 1.1" centerOfRotation="0 0.45 0.25" description="camera"></Viewpoint>
+   <Viewpoint id="S4-side" position="0. -4. 0." orientation="1. 0. 0. 1.57" description="camera"></Viewpoint>
+   <Viewpoint id="S4-top" position="0 4.0 3." orientation="-1 0 0 0.88" description="camera"></Viewpoint>
+   <Viewpoint id="S4-re-im" position="0 0 5" orientation="0. 0. 1. 0." description="camera"></Viewpoint>
+   <Viewpoint id="S4-saddle-1-1" position="-0.3 -0.55 1." orientation="0.96 -0.18 0.2 0.8" centerOfRotation="-0.24 0.11 0.26" description="camera"></Viewpoint>
+	<Viewpoint id="S4-saddle-1-2" position="-1.1 0 0.65" orientation="0.5 -0.45 -0.7 1.9" centerOfRotation="-0.24 0.11 0.26" description="camera"></Viewpoint>
+	<Viewpoint id="S4-saddle-2-1" position="1. 0.06 0.95" orientation="0.08 0.9 0.4 0.98" centerOfRotation="0.22 0 0.35" description="camera"></Viewpoint>
+	
+	<Viewpoint id="S4-saddle-2-2" position="0.5 -0.85 -0.1" orientation="0.8 0.6 -0.2 2.0" centerOfRotation="0.22 0 0.35"  description="camera"></Viewpoint>
+	<Viewpoint id="S4-saddle-2-3" position="0.5 0.7 -0.25" orientation="0.55 0.7 0.4 3.4" centerOfRotation="0.22 0 0.35"  description="camera"></Viewpoint>
+	<Viewpoint id="S4-saddle-2-4" position="-0.08 0.8 0.8" orientation="-0.2 -0.55 -0.8 2.0"  centerOfRotation="0.22 0 0.35"  description="camera"></Viewpoint>
+	<Viewpoint id="S4-saddle-2-5" position="-0.1 -0.6 1." orientation="0.55 0.1 -0.8 1.5" centerOfRotation="0.22 0 0.35"  description="camera"></Viewpoint>
+	<Viewpoint id="S4-undefined"></Viewpoint>
+   <transform translation='-6.5 0 0' scale='1. 1. 4'>
+      <Inline url="figureSD.x3d" /> 
+   </transform>
+  </scene>
+</x3d>
+</div>
+<div class="viewpoint-buttons" on="alert('hello');">
+  <button onclick="setViewPoint('S4','s3-match');setViewPoint('S3','soft-recollision');showS4PlotRange()">Fig. S3 view</button>
+  <button onclick="setViewPoint('S4','side');">Side</button>
+  <button onclick="setViewPoint('S4','top');">Top</button>
+  <button onclick="setViewPoint('S4','re-im');">$p_z$ projection</button>
+  Saddle A: 
+  <button onclick="setViewPoint('S4','saddle-1-1');">1</button>
+  <button onclick="setViewPoint('S4','saddle-1-2');">2</button>
+  Saddle B: 
+  <button onclick="setViewPoint('S4','saddle-2-1');">1</button>
+  <button onclick="setViewPoint('S4','saddle-2-2');s4ActiveCycle=2;">2</button>
+  <button onclick="setViewPoint('S4','saddle-2-3');s4ActiveCycle=3;">3</button>
+  <button onclick="setViewPoint('S4','saddle-2-4');s4ActiveCycle=4;">4</button>
+  <button onclick="setViewPoint('S4','saddle-2-5');s4ActiveCycle=5;">5</button>
+  <button onclick="s4saddleBcycle();">Cycle 2-5</button>
+</div>
+<div class="figure-description" id="figure-s4-description">
+<p>
+Closer view of the first soft recollision in Figure S3, showing in detail the topology of the quantum closest-approach surface. 
+At $p_z>0$, shown in orange, the surface has three components which are mostly real-valued, while at $p_z<0$, in green, one component is real and two are imaginary.
+These components connect at the soft recollision, but which component connects to which depends on the value of $p_x$, which leads to the mixing behaviour shown in Figs. 11(b) and (c) of the main text.
+</p>
+<p>
+Topologically, this means that what would otherwise be three separate components at high $p_x$, shown pale, are connected by 'bridges' of low transverse momentum.
+The surface thus consists of a single connected component, apart from the first few isolated roots with $\Re(\omega t)< 3 \pi/2$.
+Geometrically, this introduces two saddle points in the surface itself, which represent the degenerate points described at the end of Section IV.B, which give double roots of the closest-approach equation.
+</p>
+<p>
+In trajectory terms, the real root at $p_z<0$ is an inward turning point. 
+At high $p_x$, shown pale, it moves towards negative $\Re(\omega t)$ and becomes a closest-approach point, while at low $p_x$, shown solid, 
+it becomes the central real root in orange, which is an outward turning point.
+Similarly, the imaginary solutions of $p_z<0$ will appear, at high $p_x$, as an alternating maximum and minimum on either side of the lobe, 
+corresponding to an outward turning point and a closest-approach time.
+At low $p_x$, on the other hand, they both become closest-approach times on either side of the central turning point.
+</p>
+</div>
+
+</div> 
+
+
+
+
+
+
+
+
+
+
+
+<div id="footer">
+&copy; Emilio Pisanty, 2015.
+</div>
+	
+</div><!-- #central-column -->
+</div><!-- #content -->
+</body>
+</html>
