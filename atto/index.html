@@ -12,7 +12,7 @@ MathJax.Hub.Config({
   tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
 });
 </script>
-<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> 
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> 
 
 <!-- Google analytics -->
 <script>
@@ -39,7 +39,7 @@ MathJax.Hub.Config({
   width: 800px;
   }
 body {
-  background: #ffffff url(images/background.png) no-repeat scroll center top;
+  background: #ffffff url(background.png) no-repeat scroll center top;
   color: #303030;
   font-family: Helvetica,Tahoma,sans-serif;
   font-style: normal;
@@ -70,9 +70,30 @@ x3d{
   padding-bottom: 10px;
 }
 
+.citation{
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
 #mathjax-own-commands{
   display: none;
 }
+
+a:link {
+    color: #000099;
+    text-decoration: none;
+}
+a:visited {
+    color: #000033;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
 </style>
 
 
@@ -137,16 +158,16 @@ $$
 
 
     
-<h1>Supplementary Information</h1>
+<h1>Slalom in complex time</h1>
+<h2>Dealing with the imaginary position of a quantum orbit</h2>
+<h3>Emilio Pisanty and Misha Ivanov</h3>
 <div id="introduction">
 <p>
-This page is supplementary information to the paper <em>Slalom in complex time: emergence of low-energy structures in tunnel ionization via complex time contours</em>, by E. Pisanty and M. Ivanov.
-If this document is too slow try <a href="" >downloading a copy for local use</a>.
+This page contains 3D versions of the figures in the poster <a href="Slalom-in-complex-time-poster-atto2015.pdf" >Slalom in complex time: dealing with the imaginary position of a quantum orbit</a>.
+For more details, see our preprint!
 </p>
-<p>
-You should see four manipulatable 3D figures below. This document uses WebGL and X3DOM to run and should work on recent versions of Chrome, Firefox, Safari and Internet Explorer.
-(To use Chrome to view local copies you should <a href="http://www.chrome-allow-file-access-from-file.com/">allow access local files</a>.)
-To check whether your browser supports X3DOM <a href="http://www.x3dom.org/check/" >click here</a>; for more browser information <a href="http://www.x3dom.org/contact/" >see here</a>.
+<p class="citation">
+<em>Slalom in complex time: emergence of low-energy structures in tunnel ionization via complex time contours</em>, E. Pisanty and M. Ivanov, <a href="http://arxiv.org/abs/1507.00011" >arXiv:1507.00011</a> (2015).
 </p>
 </div>
 
@@ -159,6 +180,34 @@ To check whether your browser supports X3DOM <a href="http://www.x3dom.org/check
 Use the left mouse button to rotate the object and the middle mouse button to pan. Zoom with the mouse wheel or the right mouse button. Double click to set the center of rotation.
 </div>
 </div>
+
+
+
+<div class="figure-container" id="figure-s2">
+<div class="figure-title" id="figure-s2-title">
+  <h2>Quantum closest-approach times</h2>
+</div>
+<div class="3dfigure" id="figure-s2-figure">
+<x3d width='800px' height='500px'>
+  <scene>
+   <Viewpoint id="S2-side" position="0. -8.5 2.7" orientation="1. 0. 0. 1.3"  description="camera"></Viewpoint>
+   <Viewpoint id="S2-undefined"></Viewpoint>
+   <transform translation='-4.,0,0' scale='0.62 1. 1.'>
+     <Inline url="figureSB.x3d" />
+   </transform>
+  </scene>
+</x3d>
+</div>
+<div class="viewpoint-buttons">
+  <button onclick="setViewPoint('S2','side');">Reset view</button>
+</div>
+<div class="figure-description" id="figure-s2-description">
+The closest-approach equation $\mathbf{r}_\mathrm{cl}(t)\cdot\mathbf{v}(t)=0$ defines a two-dimensional surface 
+<!--This is a 3D version of Figure 10 in the main text, which shows the quantum, complex-valued closest-approach times on the 
+three-dimensional space $(\Re(\omega t),p_x,p_z)$. The imaginary part $\Im(\omega t)$ is denoted by the colour: black points are mostly real, 
+while red (blue) points have positive (negative) imaginary parts.--> 
+</div>
+</div> 
 
 
 
@@ -194,30 +243,7 @@ whereas the green parts of the surface are $\vbr^2$ minima and always face towar
 
 
  
-<div class="figure-container" id="figure-s2">
-<div class="figure-title" id="figure-s2-title">
-  <h2>Figure S2</h2>
-</div>
-<div class="3dfigure" id="figure-s2-figure">
-<x3d width='800px' height='500px'>
-  <scene>
-   <Viewpoint id="S2-side" position="0. -8.5 2.7" orientation="1. 0. 0. 1.3"  description="camera"></Viewpoint>
-   <Viewpoint id="S2-undefined"></Viewpoint>
-   <transform translation='-4.,0,0' scale='0.62 1. 1.'>
-     <Inline url="figureSB.x3d" />
-   </transform>
-  </scene>
-</x3d>
-</div>
-<div class="viewpoint-buttons">
-  <button onclick="setViewPoint('S2','side');">Reset view</button>
-</div>
-<div class="figure-description" id="figure-s2-description">
-This is a 3D version of Figure 10 in the main text, which shows the quantum, complex-valued closest-approach times on the 
-three-dimensional space $(\Re(\omega t),p_x,p_z)$. The imaginary part $\Im(\omega t)$ is denoted by the colour: black points are mostly real, 
-while red (blue) points have positive (negative) imaginary parts. 
-</div>
-</div> 
+
 
 
 
