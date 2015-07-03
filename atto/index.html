@@ -82,6 +82,11 @@ x3d{
   display: none;
 }
 
+.switcher {
+    color: #00CC00;
+    text-decoration: none;
+}
+
 a:link {
     color: #000099;
     text-decoration: none;
@@ -93,6 +98,8 @@ a:visited {
 a:hover {
     text-decoration: underline;
 }
+
+
 
 </style>
 
@@ -163,7 +170,7 @@ $$
 <h3>Emilio Pisanty and Misha Ivanov</h3>
 <div id="introduction">
 <p>
-This page contains 3D versions of the figures in the poster <a href="Slalom-in-complex-time-poster-atto2015.pdf" >Slalom in complex time: dealing with the imaginary position of a quantum orbit</a>.
+This page contains 3D versions of the figures in the poster <a href="Slalom%20in%20complex%20time%20-%20Emilio%20Pisanty%20-%20ATTO%202015%20poster.pdf" >Slalom in complex time: dealing with the imaginary position of a quantum orbit</a>.
 For more details, see our preprint!
 </p>
 <p class="citation">
@@ -187,6 +194,10 @@ Use the left mouse button to rotate the object and the middle mouse button to pa
 <div class="figure-title" id="figure-s2-title">
   <h2>Quantum closest-approach times</h2>
 </div>
+<div class="figure-description" id="figure-s2-description">
+The closest-approach equation $\mathbf{r}_\mathrm{cl}(t)\cdot\mathbf{v}(t)=0$ defines a two-dimensional surface in the four-dimensional space $(p_x,p_z,\Re(\omega t),$ $\Im(\omega t))$. 
+The easiest way to visualize this surface is to project out the imaginary time, which gives the figure below. Black points are mostly real, and  red (blue) points have positive (negative) imaginary parts.
+</div> 
 <div class="3dfigure" id="figure-s2-figure">
 <x3d width='800px' height='500px'>
   <scene>
@@ -201,19 +212,18 @@ Use the left mouse button to rotate the object and the middle mouse button to pa
 <div class="viewpoint-buttons">
   <button onclick="setViewPoint('S2','side');">Reset view</button>
 </div>
-<div class="figure-description" id="figure-s2-description">
-The closest-approach equation $\mathbf{r}_\mathrm{cl}(t)\cdot\mathbf{v}(t)=0$ defines a two-dimensional surface 
-<!--This is a 3D version of Figure 10 in the main text, which shows the quantum, complex-valued closest-approach times on the 
-three-dimensional space $(\Re(\omega t),p_x,p_z)$. The imaginary part $\Im(\omega t)$ is denoted by the colour: black points are mostly real, 
-while red (blue) points have positive (negative) imaginary parts.--> 
-</div>
 </div> 
 
 
 
 <div class="figure-container" id="figure-s1">
 <div class="figure-title" id="figure-s1-title">
-  <h2>Figure S1</h2>
+  <h2>Classical closest-approach times</h2>
+</div>
+<div class="figure-description" id="figure-s1-description">
+The quantum, complex, closest-approach surface encases the corresponding classical surface, which is described by the real-valued equation 
+$\Re\left[\mathbf{r}_\mathrm{cl}(t)\right]\cdot\mathbf{v}(t)=0$. This surface has a single leave, with multiple lobes joined by local cones at the soft recollisions.
+The left-facing sides are maxima of $\vbr^2$ and are shown in red; the minima, in green, are more interesting, and face to the right.
 </div>
 <div class="3dfigure" id="figure-s1-figure">
 <x3d width='800px' height='500px'>
@@ -234,11 +244,6 @@ while red (blue) points have positive (negative) imaginary parts.-->
   <button onclick="setViewPoint('S1','end');">End</button>
   <button onclick="setViewPoint('S1','red');">Red sides</button>
 </div>
-<div class="figure-description" id="figure-s1-description">
-This is a 3D version of Figure 8 in the main text, which shows the classical closest-approach times as a surface in $(\omega t,p_x,p_z)$ space. 
-Note in particular that the red parts of the surface, which represent maxima of $\vbr^2$, always face towards the left (towards negative t), 
-whereas the green parts of the surface are $\vbr^2$ minima and always face towards the right (towards positive $t$).
-</div>
 </div> 
 
 
@@ -250,13 +255,33 @@ whereas the green parts of the surface are $\vbr^2$ minima and always face towar
 
 <div class="figure-container" id="figure-s3">
 <div class="figure-title" id="figure-s3-title">
-  <h2>Figure S3</h2>
+  <h2>Structure of the quantum surface</h2>
+</div>
+<div class="figure-description" id="figure-s3-description">
+<p>
+The structure of the quantum surface is clearer if we replace the $p_x$ axis with the imaginary time $\Im(\omega t)$. 
+This separates out the various leaves of the surface and it shows how they interact with each other. 
+Operationally, one is interested in the time-plane behaviour as the momentum changes (visible by <a href="javascript:void(0)" onclick="setViewPoint('S3','re-im');" >projecting $p_z$ out</a>) 
+but the surface can wrap around itself or lie orthogonal to the projection, obscuring the view.  
+</p> 
+<p>
+This view similarly unpacks <a href="javascript:void(0)" onclick="setViewPoint('S3','soft-recollision');" >the topological structure of the surface at soft recollisions</a>, though this requires
+a finer resolution and it is shown below. In this figure green, red and orange denote negative, zero and positive $p_z$, and paler dots have higher $p_x$.
+</p>
+<!--
+The quantum times of closest approach form a two-dimensional surface within the four-dimensional space $(p_x,p_z,\Re(\omega t),\Im(\omega t))$. 
+Here we show a projection onto the three-dimensional space $(\Re(\omega t),\Im(\omega t),p_z)$, which yields Figure 11(a) of the main text if $p_z$ is projected out. 
+(The colour scale follows the scheme of Figure 11(a).)
+Some solutions, however, are mostly real are not discerned in this view; instead, they are visible by projecting out $\Im(\omega t)$.
+Other features of this surface, like the internal structure of the first bounded lobe, require more complex perspectives.
+Soft recollisions, on the other hand, require a more detailed view, which we show in Figure S4.
+-->
 </div>
 <div class="3dfigure" id="figure-s3-figure">
 <x3d width='800px' height='500px'>
   <scene>
-   <Viewpoint id="S3-re-im" position="0. 0. 11." orientation="0. 0. 1. 0"  description="camera"></Viewpoint>
    <Viewpoint id="S3-re-pz" position="0. -11. 0." orientation="1. 0. 0. 1.57"  description="camera"></Viewpoint>
+   <Viewpoint id="S3-re-im" position="0. 0. 11." orientation="0. 0. 1. 0"  description="camera"></Viewpoint>
    <Viewpoint id="S3-gap" position="-1.8 5. 1.31" orientation="-0.22 0.69 0.7 3.75"  centerOfRotation="2.9 -0.15 1.0" description="camera"></Viewpoint>
    <Viewpoint id="S3-soft-recollision" position="0.4 -3.5 1.3" orientation="1. -0.2 -0.15 1.26" centerOfRotation="1.63 0. 0.12" description="camera"></Viewpoint>
 	<Viewpoint id="S3-undefined"></Viewpoint>
@@ -275,19 +300,11 @@ whereas the green parts of the surface are $\vbr^2$ minima and always face towar
 </x3d>
 </div>
 <div class="viewpoint-buttons">
-  <button onclick="setViewPoint('S3','re-im');">$p_z$ projection</button>
   <button onclick="setViewPoint('S3','re-pz');">$\Im(\omega t)$ projection</button>
+  <button onclick="setViewPoint('S3','re-im');">$p_z$ projection</button>
   <button onclick="setViewPoint('S3','gap');">Lobe structure</button>
   <button onclick="setViewPoint('S3','soft-recollision');">Soft recollision</button>
   <button onclick="toggleS4PlotRange()" id="S3InnerBoxToggleButton">Show Fig. S4 range</button>
-</div>
-<div class="figure-description" id="figure-s3-description">
-The quantum times of closest approach form a two-dimensional surface within the four-dimensional space $(p_x,p_z,\Re(\omega t),\Im(\omega t))$. 
-Here we show a projection onto the three-dimensional space $(\Re(\omega t),\Im(\omega t),p_z)$, which yields Figure 11(a) of the main text if $p_z$ is projected out. 
-(The colour scale follows the scheme of Figure 11(a).)
-Some solutions, however, are mostly real are not discerned in this view; instead, they are visible by projecting out $\Im(\omega t)$.
-Other features of this surface, like the internal structure of the first bounded lobe, require more complex perspectives.
-Soft recollisions, on the other hand, require a more detailed view, which we show in Figure S4.
 </div>
 </div>
 
@@ -296,7 +313,15 @@ Soft recollisions, on the other hand, require a more detailed view, which we sho
 
 <div class="figure-container" id="figure-s4">
 <div class="figure-title" id="figure-s4-title">
-  <h2>Figure S4</h2>
+  <h2>Topology at soft recollisions</h2>
+</div>
+<div class="figure-description" id="figure-s4-description">
+<p>
+This figure shows a zoom to the soft recollision part of the previous figure, with a finer momentum grid. 
+At any fixed momentum there are always three roots of $\mathbf{r}_\mathrm{cl}(t)\cdot\mathbf{v}(t)=0$: three real roots at high $p_z$ (orange), and, two imaginary roots at low $p_z$ (green).
+However, these three roots cannot be separated from each other, and the value of $p_x$ (low $p_x$ in opaque dots, high $p_x$ in pale dots) affects which leaf the root connects to.
+This leads to the mixing behaviour shown in the poster.
+</p>
 </div>
 
 <div class="3dfigure" id="figure-s4-figure">
@@ -336,26 +361,6 @@ Soft recollisions, on the other hand, require a more detailed view, which we sho
   <button onclick="setViewPoint('S4','saddle-2-4');s4ActiveCycle=4;">4</button>
   <button onclick="setViewPoint('S4','saddle-2-5');s4ActiveCycle=5;">5</button>
   <button onclick="s4saddleBcycle();">Cycle 2-5</button>
-</div>
-<div class="figure-description" id="figure-s4-description">
-<p>
-Closer view of the first soft recollision in Figure S3, showing in detail the topology of the quantum closest-approach surface. 
-At $p_z>0$, shown in orange, the surface has three components which are mostly real-valued, while at $p_z<0$, in green, one component is real and two are imaginary.
-These components connect at the soft recollision, but which component connects to which depends on the value of $p_x$, which leads to the mixing behaviour shown in Figs. 11(b) and (c) of the main text.
-</p>
-<p>
-Topologically, this means that what would otherwise be three separate components at high $p_x$, shown pale, are connected by 'bridges' of low transverse momentum.
-The surface thus consists of a single connected component, apart from the first few isolated roots with $\Re(\omega t)< 3 \pi/2$.
-Geometrically, this introduces two saddle points in the surface itself, which represent the degenerate points described at the end of Section IV.B, which give double roots of the closest-approach equation.
-</p>
-<p>
-In trajectory terms, the real root at $p_z<0$ is an inward turning point. 
-At high $p_x$, shown pale, it moves towards negative $\Re(\omega t)$ and becomes a closest-approach point, while at low $p_x$, shown solid, 
-it becomes the central real root in orange, which is an outward turning point.
-Similarly, the imaginary solutions of $p_z<0$ will appear, at high $p_x$, as an alternating maximum and minimum on either side of the lobe, 
-corresponding to an outward turning point and a closest-approach time.
-At low $p_x$, on the other hand, they both become closest-approach times on either side of the central turning point.
-</p>
 </div>
 
 </div> 
