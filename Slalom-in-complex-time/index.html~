@@ -138,6 +138,18 @@ $$
 
     
 <h1>Supplementary Information</h1>
+<div id="introduction">
+<p>
+This page is supplementary information to the paper <em>Slalom in complex time: emergence of low-energy structures in tunnel ionization via complex time contours</em>, by E. Pisanty and M. Ivanov.
+If this document is too slow try <a href="" >downloading a copy for local use</a>.
+</p>
+<p>
+You should see four manipulatable 3D figures below. This document uses WebGL and X3DOM to run and should work on recent versions of Chrome, Firefox, Safari and Internet Explorer.
+(To use Chrome to view local copies you should <a href="http://www.chrome-allow-file-access-from-file.com/">allow access local files</a>.)
+To check whether your browser supports X3DOM <a href="http://www.x3dom.org/check/" >click here</a>; for more browser information <a href="http://www.x3dom.org/contact/" >see here</a>.
+</p>
+</div>
+
 
 <div id="navigation-instructions">
 <div id="navigation-title">
@@ -145,15 +157,6 @@ $$
 </div>
 <div id="navigation-content">
 Use the left mouse button to rotate the object and the middle mouse button to pan. Zoom with the mouse wheel or the right mouse button. Double click to set the center of rotation.
-</div>
-</div>
-
-<div id="browser-support">
-<div id="browser-support-title">
-  <h3>Browser support</h3>
-</div>
-<div id="browser-support-content">
-This Supplementary Information should work on Firefox and Chrome. It is faster to download a copy and open it locally, which you can do <a href="https://github.com/episanty/episanty.github.io/archive/master.zip">here</a>. This will work in Firefox, but Chrome needs you to <a href="http://www.chrome-allow-file-access-from-file.com/">allow it to access local files</a>.
 </div>
 </div>
 
