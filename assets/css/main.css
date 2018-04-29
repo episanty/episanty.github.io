@@ -162,3 +162,7 @@ main {
 .post-container {
     font-family: "Open Sans", sans-serif;
 }
+
+.post-title {
+    text-align: left;
+}
