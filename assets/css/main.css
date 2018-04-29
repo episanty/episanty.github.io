@@ -22,17 +22,23 @@ img, video, iframe {
 
 /* header */
 
-.header-wrapper {
-    max-height: 100%;
+.site-nav {
     background-color: black;
 }
 
+.header-wrapper {
+    max-height: 100%;
+/*    background-color: red;*/
+}
+
 header {
-    max-width: 80%;
+    max-width: 70%;
     margin: 0 auto;
-    background-image: url(/assets/img/bg.jpg);
-    background-size: cover;
-    color: rgba(255, 255, 255, .75);
+    background-color: white;
+/*    background-image: url(/assets/img/bg.jpg);*/
+/*    background-size: cover;*/
+/*    color: rgba(255, 255, 255, .75);*/
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
 
 .site-logo {
@@ -46,9 +52,33 @@ header {
     margin-top: 20%;
 }
 
+.head-title {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-left: 15px;
+/*
+    text-align: left;
+    margin-left: 5%;
+*/
+}
+.head-title:before {
+    content: "";
+    display: inline-block;
+    width: 33%;
+    min-width: 200px;
+}
+
+.site-title {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
 .site-description {
-    font-family: "League Gothic", "Arial Narrow", Arial, sans-serif;
-    text-align: center;
+    margin-top: 0px;
+    font-size: 13px;
+    font-weight: 400;
 }
 
 
@@ -74,7 +104,7 @@ footer {
 }
 
 .footer-wrapper { 
-    max-width: 80%;
+    max-width: 70%;
     margin: 0 auto;
 }
 
@@ -91,7 +121,7 @@ footer {
 /* main */
 
 main {
-    max-width: 80%;
+    max-width: 70%;
     margin: 0 auto;
     padding-top: 1rem;
 }

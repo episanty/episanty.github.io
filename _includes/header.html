@@ -1,12 +1,12 @@
 <div class="header-wrapper">
     <header>
         <!-- logo and description -->
-        {% if page.layout != "post" %}
+        {% if page.layout == "front" or page.layout != "front" %}
         <div class="head-area">
-            <h1 class="site-logo">
-                <a href="/"><img src="/assets/img/logo.png" class="logo"/></a>
-            </h1>
-            <h3 class="site-description">{{ site.description }}</h3>
+            <div class="head-title">
+                <h3 class="site-title">{{ site.title }}</h3>
+                <h3 class="site-description">{{ site.description }}</h3>
+            </div>
         </div>
         {% endif %}
         <nav class="site-nav">
