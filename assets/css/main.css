@@ -82,9 +82,13 @@ header {
 }
 
 a.icon.item{
-    color: red;
+    font-size: 18px;
     padding-left: 0px!important;
-    padding-right: 7px!important;
+    padding-right: 0px!important;
+}
+
+div.right.menu {
+    padding-right: 15px;
 }
 
 
