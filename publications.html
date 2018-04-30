@@ -23,13 +23,19 @@ title: Publications
     <span class="publication-sub-row">
         <div class="publication-reference">
             <a class="publication-reference" href="https://dx.doi.org/{{paper.doi}}">
-            <span class="publication-journal"> {{ paper.journal }} </span>
-            <span class="publication-volume"> {{ paper.volume }} </span>
-            <span class="publication-details"> no. {{ paper.number }}, {{paper.page}} ({{ paper.year }}) </span>
+                <span class="publication-journal"> {{ paper.journal }} </span>
+                <span class="publication-volume"> {{ paper.volume }} </span>
+                <span class="publication-details"> no. {{ paper.number }}, {{paper.page}} ({{ paper.year }}) </span>
             </a>
+            {% if paper.arxiv-id %}
+            &ndash;
+            <a class="publication-arxiv-link" href="https://arxiv.org/abs/{{paper.arxiv-id}}">
+                arXiv:{{paper.arxiv-id}}
+            </a>
+            {% endif %}
             &ndash;
             <a class="publication-pdf" href="#"> 
-            <i class="far fa-file-pdf"></i> pdf
+                <i class="far fa-file-pdf"></i> pdf
             </a>
         </div>
     </span>
