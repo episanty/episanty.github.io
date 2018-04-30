@@ -3,6 +3,15 @@ layout: page
 title: Publications
 ---
 
+
+<!--
+<div>Key Publications</div>
+<div>Peer-reviewed Publications</div>
+<div>Theses</div>
+
+<div class="ui divider"></div>
+-->
+
 <div class="publications-table">
     {% assign publications_sorted = site.publications  | sort: 'publication-date' | reverse %}
     {% for paper in publications_sorted %}
@@ -19,18 +28,22 @@ title: Publications
     </span>
     <span class="publication-sub-row">
         <div class="publication-reference">
+            {%if paper.journal %}
             <a class="publication-reference" href="https://dx.doi.org/{{paper.doi}}" target="_blank">
                 <span class="publication-journal"> {{ paper.journal }} </span>
                 <span class="publication-volume"> {{ paper.volume }} </span>
                 <span class="publication-details"> no. {{ paper.number }}, {{paper.page}} ({{ paper.year }}) </span>
             </a>
-            {% if paper.arxiv-id %}
             &ndash;
-            <a class="publication-arxiv-link" href="https://arxiv.org/abs/{{paper.arxiv-id}}" target="_blank">
-                arXiv:{{paper.arxiv-id}}
-            </a>
             {% endif %}
-            &ndash;
+            {% if paper.arxiv-id %}
+                <a class="publication-arxiv-link" href="https://arxiv.org/abs/{{paper.arxiv-id}}" target="_blank">arXiv:{{paper.arxiv-id}}</a>
+                &ndash;
+            {% endif %}
+            {% if paper.handle-id %}
+                <a class="publication-hanlde-link" href="http://hdl.handle.net/{{paper.hanlde-id}}" target="_blank">handle:{{paper.handle-id}}</a>
+                &ndash;
+            {% endif %}
             <a class="publication-pdf" href="#" target="_blank"> 
                 <i class="far fa-file-pdf"></i> pdf
             </a>

@@ -177,7 +177,12 @@ main {
 /* publications */
 
 .publication-row {
-    padding-bottom: 15px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.publication-row:hover {
+    background-color: #EEEEEE;
 }
 
 .publication-journal {
