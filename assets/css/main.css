@@ -170,3 +170,30 @@ main {
 .post-title {
     text-align: left;
 }
+
+/* /post */
+
+
+/* publications */
+
+.publication-row {
+    padding-bottom: 15px;
+}
+
+.publication-journal {
+    font-style: italic;
+}
+.publication-volume {
+    font-weight: 600;
+}
+
+
+/* /publications */
+
+
+
+
+
+
+
+
