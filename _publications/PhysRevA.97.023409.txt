@@ -1,0 +1,11 @@
+---
+title: "Control of attosecond light polarization in two-color bicircular fields"
+author: "Á. Jiménez-Galán and N. Zhavoronkov, D. Ayuso, F. Morales, S. Patchkovskii, M. Schloz, E. Pisanty, O. Smirnova and M. Ivanov"
+journal: "Physical Review A"
+volume: "97"
+number: "2"
+page: "023409"
+year: "2018"
+doi: "10.1103/PhysRevA.97.023409"
+publication-date: "2018-02-08"
+---

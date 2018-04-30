@@ -1,0 +1,13 @@
+---
+title: "Momentum transfers in correlation-assisted tunneling"
+author: "Emilio Pisanty and Misha Ivanov"
+journal: "Physical Review A"
+volume: "89"
+number: "4"
+pages: "043416"
+year: "2014"
+doi: "10.1103/PhysRevA.89.043416"
+arxiv-id: "1309.4765"
+abstract: "We consider correlation-assisted tunnel ionization of a small molecule by an intense low-frequency laser pulse. In this mechanism, the departing electron excites the state of the ion via a Coulomb interaction. We show that the wave packets emerging from this process can have nontrivial spatial structure and give a measurable indicator of correlated multielectron dynamics during the tunneling step. We also show that the saddle-point approximation requires special attention in this geometric analysis."
+publication-date: "2014-04-16"
+---

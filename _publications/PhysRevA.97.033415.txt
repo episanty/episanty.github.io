@@ -1,0 +1,12 @@
+---
+title: "Above-threshold ionization in multicenter molecules: The role of the initial state"
+author: "Noslen Suárez, Alexis Chacón, Emilio Pisanty, Lisa Ortmann, Alexandra S. Landsman, Antonio Picón, Jens Biegerrt, Maciej Lewenstein and Marcelo F. Ciappina"
+journal: "Physical Review A"
+volume: "97"
+number: "3"
+page: "033415"
+year: "2018"
+doi: "10.1103/PhysRevA.97.033415"
+arxiv-id: "1709.04366"
+publication-date: "2018-03-29"
+---

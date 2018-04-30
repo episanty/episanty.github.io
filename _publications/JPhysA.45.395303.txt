@@ -1,0 +1,12 @@
+---
+title: "On the spectrum of field quadratures for a finite number of photons"
+author: "E. Pisanty and E. Nahmad-Achar"
+journal: "Journal of Physics A: Mathematical and Theoretical"
+volume: "45"
+number: "39"
+page: "395303"
+year: "2012"
+doi: "10.1088/1751-8113/45/39/395303"
+arxiv-id: "1109.5724"
+publication-date: "2012-09-11"
+---
