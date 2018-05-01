@@ -179,6 +179,7 @@ main {
 .publication-row {
     padding-top: 7px;
     padding-bottom: 7px;
+    padding-left: 10px;
 }
 
 .publication-row:hover {
