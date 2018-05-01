@@ -159,13 +159,18 @@ main {
     word-wrap: break-word;
 }
 
-#container{
+.centered-column-container {
+/*    align-content: center;*/
+}
+.container{
+/*    max-width: 800px;*/
+/*    align-content: center;*/
 }
 
-#floated{
+.floated{
     float: left;
     width: 150px;
-    margin: 20px;
+    margin: 5px 20px 20px 20px;
 }
 
 /* /main */
