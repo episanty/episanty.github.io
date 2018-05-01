@@ -1,0 +1,94 @@
+---
+layout: default
+---
+
+
+<div class="publication-details-table">
+    <div class="publication-details-row" id="publication-title">
+        <div class="publications-details-cell key">
+            title:
+        </div>
+        <div class="publications-details-cell value">
+            <a class="publication-details-title" href="{{page.url}}"> 
+                {{page.title}}
+            </a>
+        </div>
+    </div>
+    <div class="publication-details-row" id="publication-authors">
+        <div class="publications-details-cell key">
+            authors:
+        </div>
+        <div class="publications-details-cell value">
+            {{page.author}}
+        </div>
+    </div>
+    {%if page.journal %}
+    <div class="publication-details-row" id="publication-reference">
+        <div class="publications-details-cell key">
+            reference:
+        </div>
+        <div class="publications-details-cell value">
+            <a class="publication-reference" href="https://dx.doi.org/{{paper.doi}}" target="_blank">
+                <span class="publication-journal"> {{ page.journal }} </span>
+                <span class="publication-volume"> {{ page.volume }} </span>
+                <span class="publication-details"> no. {{ page.number }}, {{page.page}} ({{ page.year }}) </span>
+            </a>
+        </div>
+    </div>
+    {% endif %}
+    {%if page.doi %}
+    <div class="publication-details-row" id="publication-reference">
+        <div class="publications-details-cell key">
+            doi:
+        </div>
+        <div class="publications-details-cell value">
+            <a href="https://dx.doi.org/{{paper.doi}}" target="_blank">{{page.doi}}</a>
+        </div>
+    </div>
+    {% endif %}
+    {%if page.arxiv-id %}
+    <div class="publication-details-row" id="publication-reference">
+        <div class="publications-details-cell key">
+            arXiv id:
+        </div>
+        <div class="publications-details-cell value">
+            <a href="https://arxiv.org/abs/{{page.arxiv-id}}" target="_blank">arXiv:{{page.arxiv-id}}</a>
+        </div>
+    </div>
+    {% endif %}
+    {%if page.handle-id %}
+    <div class="publication-details-row" id="publication-reference">
+        <div class="publications-details-cell key">
+            handle:
+        </div>
+        <div class="publications-details-cell value">
+            <a href="http://hdl.handle.net/{{page.hanlde-id}}" target="_blank">{{page.handle-id}}</a>
+        </div>
+    </div>
+    {% endif %}
+    <div class="publication-details-row" id="publication-title">
+        <div class="publications-details-cell key">
+            pdf:
+        </div>
+        <div class="publications-details-cell value">
+            <a href="/publications/{{page.pdf-filename}}" target="_blank"> 
+                {{page.pdf-filename}}
+            </a>
+        </div>
+    </div>
+    {%if page.abstract %}
+    <div class="publication-details-row" id="publication-reference">
+        <div class="publications-details-cell key">
+            abstract:
+        </div>
+        {{ page.abstract }}
+    </div>
+    {% endif %}
+</div>
+
+
+
+<!--
+<div class="publications-list-backlink">
+Return to publications list.
+</div>-->

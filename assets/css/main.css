@@ -255,6 +255,42 @@ main {
 }
 
 
+.publication-details-table { 
+    display: table;
+    padding-top: 20px;
+    width: 100%;
+}
+.publication-details-row { 
+    display: table-row; 
+}
+.publications-details-cell { 
+    display: table-cell; 
+}
+.publications-details-cell.key {
+    text-align: right;
+    padding: 2px 15px 2px 5px; /*trbl*/
+    font-weight: 600;
+}
+
+div.publication-details-table a { 
+    color: black;
+}
+div.publication-details-table a:hover { 
+    color: #4183c4;
+}
+
+a.publication-details-title {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+
+.publication-details-row:hover {
+    background-color: #EEEEEE;
+}
+.publication-details-row:hover .author-me { text-decoration: underline; }
+
+
 
 /* /publications */
 

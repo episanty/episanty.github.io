@@ -4,9 +4,16 @@ description: 'Quantum physicist'
 collections: 
   publications:
     output: true
-    permalink: /publications/:path/
+    permalink: /publications/:path
   front-page-cards:
     output: false
+
+defaults:
+  - scope:
+      path: ""
+      type: "publications"
+    values:
+      layout: publication-landing-page
 
 markdown: kramdown
 highlighter: rouge
