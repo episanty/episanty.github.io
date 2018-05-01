@@ -107,8 +107,7 @@ div.right.menu {
 /* footer */
 
 footer {
-    color: rgba(255, 255, 255, .75) !important;    
-    background-color: black;
+    color: hsl(120, 0%, 75%);
     height: 6rem;
     padding-top: 1rem;
 }
