@@ -8,4 +8,5 @@ page: "023409"
 year: "2018"
 doi: "10.1103/PhysRevA.97.023409"
 publication-date: "2018-02-08"
+pdf-filename: "PhysRevA.97.023409.pdf"
 ---

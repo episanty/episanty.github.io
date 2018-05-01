@@ -4,4 +4,5 @@ author: "<span class='author-me'>Emilio Pisanty</span>, Daniel D. Hickstein, Ben
 year: "2016"
 arxiv-id: "1606.01931"
 publication-date: "2016-06-06"
+pdf-filename: "arXiv.1606.01931.pdf"
 ---

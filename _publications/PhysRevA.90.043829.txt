@@ -10,4 +10,5 @@ doi: "10.1103/PhysRevA.90.043829"
 arxiv-id: "1404.6242"
 abstract: "We present an alternative theoretical model for a recent experiment [A. Fleischer  et al., Nature Photon. 8 , 543 (2014)] which used bichromatic, counter-rotating high-intensity laser pulses to probe the conservation of spin angular momentum in high-order-harmonic generation. We separate elliptical polarizations into independent circular fields with definite angular momentum, instead of using the expectation value of spin for each photon in the conservation equation, and we find good agreement with the experimental results. In our description the generation of each individual harmonic conserves spin angular momentum, in contrast to the model proposed by Fleischer et al. Our model also correctly describes analogous processes in standard perturbative optics."
 publication-date: "2014-10-16"
+pdf-filename: "PhysRevA.90.043829.pdf"
 ---

@@ -9,4 +9,5 @@ year: "2018"
 doi: "10.1103/PhysRevA.97.033415"
 arxiv-id: "1709.04366"
 publication-date: "2018-03-29"
+pdf-filename: "PhysRevA.97.033415.pdf"
 ---
