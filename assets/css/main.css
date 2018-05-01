@@ -20,6 +20,12 @@ img, video, iframe {
     max-width: 100%;
 }
 
+
+
+
+
+
+
 /* header */
 
 .site-nav {
@@ -32,14 +38,41 @@ img, video, iframe {
 }
 
 header {
-    max-width: 70%;
+    max-width: 60%;
     margin: 0 auto;
     background-color: white;
 /*    background-image: url(/assets/img/bg.jpg);*/
-/*    background-size: cover;*/
 /*    color: rgba(255, 255, 255, .75);*/
     font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
+
+.head-area {
+    height: 110px;
+    background-image: url(/assets/img/ellipses-pale.png); /*951×472*/
+    background-size: 250px;
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.head-title {
+    padding-top: 25px;
+    padding-left: 35px
+}
+/*
+.head-title {
+    margin-top: 0px;
+    margin-bottom: 30px;
+    margin-left: 25px;
+}
+*/
+/*
+.head-title:before {
+    content: "";
+    display: inline-block;
+    width: 33%;
+    min-width: 200px;
+}
+*/
 
 .site-logo {
     max-width: 15%;
@@ -50,22 +83,6 @@ header {
 .logo {
     width: 100%;
     margin-top: 20%;
-}
-
-.head-title {
-    margin-top: 20px;
-    margin-bottom: 30px;
-    margin-left: 15px;
-/*
-    text-align: left;
-    margin-left: 5%;
-*/
-}
-.head-title:before {
-    content: "";
-    display: inline-block;
-    width: 33%;
-    min-width: 200px;
 }
 
 .site-title {
@@ -94,6 +111,12 @@ div.right.menu {
 
 /* /header */
 
+
+
+
+
+
+
 .page-wrap {
     min-height: 100%;
     margin-bottom: 1rem;
@@ -104,6 +127,11 @@ div.right.menu {
     display: block;
 }
 
+
+
+
+
+
 /* footer */
 
 footer {
@@ -113,7 +141,7 @@ footer {
 }
 
 .footer-wrapper { 
-    max-width: 70%;
+    max-width: 60%;
     margin: 0 auto;
 }
 
@@ -127,10 +155,16 @@ footer {
 
 /* /footer */
 
+
+
+
+
+
+
 /* main */
 
 main {
-    max-width: 70%;
+    max-width: 60%;
     margin: 0 auto;
     padding-top: 1rem;
 }
@@ -175,6 +209,9 @@ main {
 
 /* /main */
 
+
+
+
 /* post */
 
 .post-container {
@@ -186,6 +223,7 @@ main {
 }
 
 /* /post */
+
 
 
 /* publications */
