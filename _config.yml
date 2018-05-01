@@ -3,6 +3,7 @@ description: 'Quantum physicist'
 
 collections: 
  - publications
+ - front-page-cards
 
 markdown: kramdown
 highlighter: rouge
