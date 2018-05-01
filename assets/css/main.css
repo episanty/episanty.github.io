@@ -159,6 +159,16 @@ main {
 .description {
     word-wrap: break-word;
 }
+
+#container{
+}
+
+#floated{
+    float: left;
+    width: 150px;
+    margin: 20px;
+}
+
 /* /main */
 
 /* post */
