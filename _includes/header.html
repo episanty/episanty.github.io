@@ -3,19 +3,18 @@
         <!-- logo and description -->
         {% if page.layout == "front" or page.layout != "front" %}
         <div class="head-area">
-            <div class="head-title">
-                <h3 class="site-title">{{ site.title }}</h3>
-                <h3 class="site-description">{{ site.description }}</h3>
-            </div>
+            <a class="item" href="/">
+                <div class="head-title">
+                    <h3 class="site-title">{{ site.title }}</h3>
+                    <h3 class="site-description">{{ site.description }}</h3>
+                </div>
+            </a>
         </div>
         {% endif %}
         <nav class="site-nav">
             <div class="left-nav">
                 <!-- add titles to all buttons -->
                 <div class="ui secondary menu inverted">
-                    <a class="item" href="/">
-                        Home
-                    </a>
                     <a class="item" href="/about.html">
                         About
                     </a>

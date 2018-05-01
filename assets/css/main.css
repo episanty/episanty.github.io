@@ -56,7 +56,8 @@ header {
 
 .head-title {
     padding-top: 25px;
-    padding-left: 35px
+    padding-left: 35px;
+    color: black;
 }
 /*
 .head-title {
