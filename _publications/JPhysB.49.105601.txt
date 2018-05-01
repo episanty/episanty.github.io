@@ -1,6 +1,6 @@
 ---
 title: "Kinematic origin for near-zero energy structures in mid-IR strong field ionization"
-author: "Emilio Pisanty and Misha Ivanov"
+author: "<span class='author-me'>Emilio Pisanty</span> and Misha Ivanov"
 journal: "Journal of Physics B: Atomic, Molecular and Optical Physics"
 year: "2016"
 volume: "49"

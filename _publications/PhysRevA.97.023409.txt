@@ -1,6 +1,6 @@
 ---
 title: "Control of attosecond light polarization in two-color bicircular fields"
-author: "Á. Jiménez-Galán and N. Zhavoronkov, D. Ayuso, F. Morales, S. Patchkovskii, M. Schloz, E. Pisanty, O. Smirnova and M. Ivanov"
+author: "Á. Jiménez-Galán and N. Zhavoronkov, D. Ayuso, F. Morales, S. Patchkovskii, M. Schloz, <span class='author-me'>E. Pisanty</span>, O. Smirnova and M. Ivanov"
 journal: "Physical Review A"
 volume: "97"
 number: "2"

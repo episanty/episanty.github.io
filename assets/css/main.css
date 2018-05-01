@@ -239,12 +239,21 @@ main {
     background-color: #EEEEEE;
 }
 
+.publication-row:hover .author-me { text-decoration: underline; }
+
+.publication-title {
+    font-weight: 300;
+}
 .publication-journal {
     font-style: italic;
 }
 .publication-volume {
     font-weight: 600;
 }
+.publication-authors {
+    color: rgba(0,0,0,.5);
+}
+
 
 
 /* /publications */

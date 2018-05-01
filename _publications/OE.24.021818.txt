@@ -1,6 +1,6 @@
 ---
 title: "Lorentz drift compensation in high harmonic generation in the soft and hard X-ray regions of the spectrum"
-author: "Benjamin R. Galloway, Dimitar Popmintchev, Emilio Pisanty, Daniel D. Hickstein, Margaret M. Murnane, Henry C. Kapteyn, and Tenio Popmintchev"
+author: "Benjamin R. Galloway, Dimitar Popmintchev, <span class='author-me'>Emilio Pisanty</span>, Daniel D. Hickstein, Margaret M. Murnane, Henry C. Kapteyn, and Tenio Popmintchev"
 journal: "Optics Express"
 volume: "24"
 number: "19"

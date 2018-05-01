@@ -1,6 +1,6 @@
 ---
 title: "Slalom in complex time: Emergence of low-energy structures in tunnel ionization via complex time contours"
-author: "Emilio Pisanty and Misha Ivanov"
+author: "<span class='author-me'>Emilio Pisanty</span> and Misha Ivanov"
 journal: "Physical Review A"
 volume: "93"
 number: "4"

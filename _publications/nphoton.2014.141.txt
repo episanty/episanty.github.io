@@ -1,6 +1,6 @@
 ---
 title: "High-harmonic generation: Taking control of polarization"
-author: "Misha Ivanov and Emilio Pisanty"
+author: "Misha Ivanov and <span class='author-me'>Emilio Pisanty</span>"
 journal: "Nature Photonics"
 volume: "8"
 number: "7"

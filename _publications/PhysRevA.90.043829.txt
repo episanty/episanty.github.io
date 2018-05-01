@@ -1,6 +1,6 @@
 ---
 title: "Spin conservation in high-order-harmonic generation using bicircular fields"
-author: "Emilio Pisanty, Suren Sukiasyan and Misha Ivanov"
+author: "<span class='author-me'>Emilio Pisanty</span>, Suren Sukiasyan and Misha Ivanov"
 journal: "Physical Review A"
 volume: "90"
 number: "4"

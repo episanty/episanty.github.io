@@ -1,6 +1,6 @@
 ---
 title: "Momentum transfers in correlation-assisted tunneling"
-author: "Emilio Pisanty and Misha Ivanov"
+author: "<span class='author-me'>Emilio Pisanty</span> and Misha Ivanov"
 journal: "Physical Review A"
 volume: "89"
 number: "4"

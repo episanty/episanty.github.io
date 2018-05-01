@@ -1,6 +1,6 @@
 ---
 title: "Strong-field approximation in a rotating frame: High-order harmonic emission from p states in bicircular fields"
-author: "Emilio Pisanty and Álvaro Jiménez-Galán"
+author: "<span class='author-me'>Emilio Pisanty</span> and Álvaro Jiménez-Galán"
 journal: "Physical Review A"
 volume: "96"
 number: "6"

@@ -1,6 +1,6 @@
 ---
 title: "High harmonic interferometry of the Lorentz force in strong mid-infrared laser fields"
-author: "Emilio Pisanty, Daniel D. Hickstein, Benjamin R. Galloway, Charles G. Durfee, Henry C. Kapteyn, Margaret M. Murnane and Misha Ivanov"
+author: "<span class='author-me'>Emilio Pisanty</span>, Daniel D. Hickstein, Benjamin R. Galloway, Charles G. Durfee, Henry C. Kapteyn, Margaret M. Murnane and Misha Ivanov"
 year: "2016"
 arxiv-id: "1606.01931"
 publication-date: "2016-06-06"
