@@ -146,6 +146,17 @@ footer {
     margin: 0 auto;
 }
 
+.github-pages-link {
+    float: right;
+}
+.github-pages-link a {
+    color: inherit;
+}
+.github-pages-link a:hover {
+    color: hsl(120, 0%, 65%);
+}
+
+
 .ui.transparent.icon.input {
     color: rgba(255, 255, 255, .75) !important;
 }
