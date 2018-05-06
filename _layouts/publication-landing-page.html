@@ -71,7 +71,9 @@ layout: default
         <div class="publications-details-cell key">
             abstract:
         </div>
-        {{ page.abstract }}
+        <div class="publications-details-cell value abstract">
+            {{ page.abstract }}
+        </div>
     </div>
     {% endif %}
     {%if page.license %}
