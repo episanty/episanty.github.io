@@ -31,12 +31,16 @@ layout: default
         </div>
         <div class="publications-header-row"><div class="header-divider"></div></div>
     </div>
-    
+
 
     <div class="publications-table">
         {% assign publications_sorted = site.publications  | sort: 'publication-date' | reverse %}
         {% for paper in publications_sorted %}
-        {% unless paper.unlisted %}
+        {% if 
+              (paper.unlisted != "true")
+              and (page.selection != "theses" or paper.type == "thesis")
+              and (page.selection != "key-publications" or paper.key-publication == "true")
+        %}
         <div class="publication-row">
         <span class="publication-sub-row">
             <div class="publication-title">
@@ -82,7 +86,7 @@ layout: default
             </div>
         </span>
         </div>
-        {% endunless %}
+        {% endif %}
         {% endfor %}
     </div>
     
