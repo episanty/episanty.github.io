@@ -1,0 +1,72 @@
+---
+layout: default
+---
+
+
+<div class="publication-details-table">
+    <div class="publication-details-row" id="publication-title">
+        <div class="publications-details-cell key">
+            title:
+        </div>
+        <div class="publications-details-cell value">
+            <a class="publication-details-title" href="{{page.url}}"> 
+                {{page.title}}
+            </a>
+        </div>
+    </div>
+    <div class="publication-details-row" id="publication-authors">
+        <div class="publications-details-cell key">
+            authors:
+        </div>
+        <div class="publications-details-cell value">
+            {{page.author}}
+        </div>
+    </div>
+    <div class="publication-details-row" id="publication-reference">
+        <div class="publications-details-cell key">
+            url:
+        </div>
+        <div class="publications-details-cell value">
+            <a href="https://github.com/{{page.github-id}}" target="_blank">github.com/{{page.github-id}}</a>
+        </div>
+    </div>
+    {%if page.description %}
+    <div class="publication-details-row" id="publication-reference">
+        <div class="publications-details-cell key">
+            description:
+        </div>
+        <div class="publications-details-cell value abstract">
+            {{ page.description }}
+        </div>
+    </div>
+    {% endif %}
+    {%if page.license %}
+    <div class="publication-details-row" id="publication-reference">
+        <div class="publications-details-cell key license">
+            license:
+        </div>
+        <div class="publications-details-cell value license">
+            {% if page.license contains 'cc-' %}
+            <a href="https://creativecommons.org/licenses/{{ page.license | remove: 'cc-' }}/4.0/" target="_blank">
+                <img src="/assets/img/cc/{{ page.license }}.png" />
+            </a>
+            {% else %}
+            <a href="https://opensource.org/licenses/{{ page.license }}" target="_blank">
+                <img src="/assets/img/cc/{{ page.license }}.svg" />
+            </a>
+            {% endif %}
+        </div>
+    </div>
+    {% endif %}
+    
+    
+    
+    
+</div>
+
+
+
+<!--
+<div class="publications-list-backlink">
+Return to publications list.
+</div>-->

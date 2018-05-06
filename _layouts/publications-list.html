@@ -42,22 +42,29 @@ layout: default
         {% assign publications_sorted = site.publications  | sort: 'publication-date' | reverse %}
         {% for paper in publications_sorted %}
         
-        {% assign displaypaper = false %}
+        {% assign display-item = false %}
         {% if paper.unlisted != "true" %}
             {% if page.selection == "key-publications" and paper.key-publication == "true" %}
-                {% assign displaypaper = true %}
+                {% assign display-item = true %}
             {% endif %}
             {% if page.selection == "theses" and paper.type == "thesis" %}
-                {% assign displaypaper = true %}
+                {% assign display-item = true %}
             {% endif %}
             {% if page.selection == "journal-publications" and paper.type == "journal-paper" %}
-                {% assign displaypaper = true %}
+                {% assign display-item = true %}
+            {% endif %}
+            {% if page.selection == "code" and paper.type == "code" %}
+                {% assign display-item = true %}
             {% endif %}
             {% if page.selection == "all-publications" %}
-                {% assign displaypaper = true %}
+                {% assign display-item = true %}
             {% endif %}
         {% endif %}
-        {% if displaypaper == true %}
+        
+        {% if display-item == true %}
+        
+        {% if paper.type == "journal-paper" or paper.type == "thesis" %}
+        
         <div class="publication-row">
         <span class="publication-sub-row">
             <div class="publication-title">
@@ -103,6 +110,36 @@ layout: default
             </div>
         </span>
         </div>
+        
+        {% endif %}
+        
+        {% if paper.type == "code" %}
+        
+        <div class="publication-row">
+        <span class="publication-sub-row">
+            <div class="publication-title">
+                <a class="publication-title" href="{{paper.url}}">
+                    {{ paper.title }}
+                </a>
+            </div>
+        </span>
+        <span class="publication-sub-row">
+            <div class="publication-authors">
+                {{ paper.author }}
+            </div>
+        </span>
+        <span class="publication-sub-row">
+            <div class="code-url">
+                <a href="https://github.com/{{paper.github-id}}" target="_blank">
+                    github.com/{{paper.github-id}}
+                </a>
+            </div>
+        </span>
+        </div>
+        
+        {% endif %}
+        
+        
         {% endif %}
         {% endfor %}
     </div>
