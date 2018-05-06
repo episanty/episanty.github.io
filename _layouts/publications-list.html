@@ -9,18 +9,24 @@ layout: default
         <div class="publications-header-row"><div class="header-divider"></div></div>
         <div class="publications-header-row">
             <div class="publications-header-cell {% if page.selection == 'key-publications' %} selected {% endif%}">
-                Key publications
+                <a href="/publications/key-publications">
+                    Key Publications
+                </a>
             </div>
             <div class="publications-header-cell {% if page.selection == 'all-publications' %} selected {% endif%}">
-                All publications
+                <a href="/publications">
+                    All Publications
+                </a>
             </div>
-            <div class="publications-header-cell {% if page.selection == 'theses' %} selected {% endif%}"  onclick="location.href='/publications/theses';" style="cursor: pointer;">
+            <div class="publications-header-cell {% if page.selection == 'theses' %} selected {% endif%}">
                 <a href="/publications/theses">
-                Theses
+                    Theses
                 </a>
             </div>
             <div class="publications-header-cell {% if page.selection == 'code' %} selected {% endif%}">
-                Code
+                <a href="/publications/code">
+                    Code
+                </a>
             </div>
         </div>
         <div class="publications-header-row"><div class="header-divider"></div></div>

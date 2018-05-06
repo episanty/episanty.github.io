@@ -292,7 +292,7 @@ a.publication-title:hover {
 }
 .publications-header-cell { 
     display: table-cell; 
-    padding: 25px;
+    padding: 5px;
 }
 .publications-header-cell:hover { 
     background-color: #EEEEEE;
@@ -315,9 +315,6 @@ a.publication-title:hover {
 .publications-header-cell a:hover {
     color: black;
 }
-
-
-
 
 
 
