@@ -8,6 +8,7 @@ title: Publications
 <div class="publications-table">
     {% assign publications_sorted = site.publications  | sort: 'publication-date' | reverse %}
     {% for paper in publications_sorted %}
+    {% unless paper.unlisted %}
     <div class="publication-row">
     <span class="publication-sub-row">
         <div class="publication-title">
@@ -53,6 +54,7 @@ title: Publications
         </div>
     </span>
     </div>
+    {% endunless %}
     {% endfor %}
 </div>
 
