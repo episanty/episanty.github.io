@@ -49,12 +49,6 @@ also software!
             </a>
             &ndash;
             {% endif %}
-<!--
-            {% if paper.arxiv-id %}
-                <a class="publication-arxiv-link" href="https://arxiv.org/abs/{{paper.arxiv-id}}" target="_blank">arXiv:{{paper.arxiv-id}}</a>
-                &ndash;
-            {% endif %}
--->        
             {% for identifier in paper.identifiers %} {% if identifier.name=="arXiv id" %}
                 <a class="publication-arxiv-link" href="https://arxiv.org/abs/{{identifier.value}}" target="_blank">arXiv:{{identifier.value}}</a>
                 &ndash;
@@ -63,29 +57,10 @@ also software!
                 <a class="publication-handle-link" href="http://hdl.handle.net/{{identifier.value}}" target="_blank">handle:{{identifier.value}}</a>
                 &ndash;
             {% endif %} {% endfor %}
-<!--
-            {% if paper.handle-id %}
-                <a class="publication-handle-link" href="http://hdl.handle.net/{{paper.hanlde-id}}" target="_blank">handle:{{paper.handle-id}}</a>
-                &ndash;
-            {% endif %}
--->
             <a class="publication-pdf" href="publications/{{paper.pdf-filename}}" target="_blank"> 
                 <i class="far fa-file-pdf"></i> pdf
             </a>
         </div>
-<!--
-        <div>
-        {% for identifier in paper.identifiers %}
-        <div>
-        {{identifier.name}}
-            -----
-        {% if identifier.name=="arXiv id" %}
-        {{identifier.value}}
-        {% endif %}
-        </div>
-        {% endfor %}
-        </div>
--->
     </span>
     </div>
     {% endfor %}
