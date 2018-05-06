@@ -292,10 +292,13 @@ a.publication-title:hover {
 }
 .publications-header-cell { 
     display: table-cell; 
-    padding: 5px;
+    padding: 25px;
 }
 .publications-header-cell:hover { 
     background-color: #EEEEEE;
+}
+.publications-header-cell.selected { 
+    background-color: #DDDDDD;
 }
 
 .header-divider {
@@ -303,6 +306,14 @@ a.publication-title:hover {
     height: 0em;
     color: rgba(0, 0, 0, 0.85);
     border-top: 1px solid rgba(34, 36, 38, 0.15);
+}
+
+.publications-header-cell a {
+    display: block;
+    color: black;
+}
+.publications-header-cell a:hover {
+    color: black;
 }
 
 
