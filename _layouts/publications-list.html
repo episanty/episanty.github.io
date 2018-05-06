@@ -18,6 +18,11 @@ layout: default
                     All Publications
                 </a>
             </div>
+            <div class="publications-header-cell {% if page.selection == 'journal-publications' %} selected {% endif%}">
+                <a href="/publications/journal-publications">
+                    Journal Publications
+                </a>
+            </div>
             <div class="publications-header-cell {% if page.selection == 'theses' %} selected {% endif%}">
                 <a href="/publications/theses">
                     Theses
@@ -43,6 +48,9 @@ layout: default
                 {% assign displaypaper = true %}
             {% endif %}
             {% if page.selection == "theses" and paper.type == "thesis" %}
+                {% assign displaypaper = true %}
+            {% endif %}
+            {% if page.selection == "journal-publications" and paper.type == "journal-paper" %}
                 {% assign displaypaper = true %}
             {% endif %}
             {% if page.selection == "all-publications" %}
