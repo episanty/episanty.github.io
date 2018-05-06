@@ -346,6 +346,15 @@ ui.divider {
 .publications-details-cell.key.license {
     vertical-align: middle;
 }
+.publications-details-cell.value.license {
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+.publications-details-cell.value.abstract {
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
 
 div.publication-details-table a { 
     color: black;
