@@ -36,11 +36,20 @@ layout: default
     <div class="publications-table">
         {% assign publications_sorted = site.publications  | sort: 'publication-date' | reverse %}
         {% for paper in publications_sorted %}
-        {% if 
-              (paper.unlisted != "true")
-              and (page.selection != "theses" or paper.type == "thesis")
-              and (page.selection != "key-publications" or paper.key-publication == "true")
-        %}
+        
+        {% assign displaypaper = false %}
+        {% if paper.unlisted != "true" %}
+            {% if page.selection == "key-publications" and paper.key-publication == "true" %}
+                {% assign displaypaper = true %}
+            {% endif %}
+            {% if page.selection == "theses" and paper.type == "thesis" %}
+                {% assign displaypaper = true %}
+            {% endif %}
+            {% if page.selection == "all-publications" %}
+                {% assign displaypaper = true %}
+            {% endif %}
+        {% endif %}
+        {% if displaypaper == true %}
         <div class="publication-row">
         <span class="publication-sub-row">
             <div class="publication-title">
