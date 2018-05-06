@@ -285,14 +285,10 @@ a.publication-title:hover {
 
 .publications-header-table { 
     display: table;
-    padding-top: 10px;
+    padding-bottom: 15px;
     width: 100%;
 }
 .publications-header-row { 
-    display: table-row; 
-    border-width: 5px 0; /*  1px top & bottom border,  0px left & right */
-    border-color: #000;
-    border-style: solid;
 }
 .publications-header-cell { 
     display: table-cell; 
@@ -301,28 +297,18 @@ a.publication-title:hover {
 .publications-header-cell:hover { 
     background-color: #EEEEEE;
 }
-/*
-.ui.divider.submenu-top {
-    margin-bottom: 0px;
-    border-bottom-width: 0px;
-}
-.ui.divider.submenu-bottom {
-    margin-top: 0px;
-    border-top: 0px;
-}
-*/
-/*
-ui.divider {
-    margin: 1rem 0;
+
+.header-divider {
     line-height: 1;
-    height: 0;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: .05em;
-    color: rgba(0,0,0,.85);
-    user-select: none;
+    height: 0em;
+    color: rgba(0, 0, 0, 0.85);
+    border-top: 1px solid rgba(34, 36, 38, 0.15);
 }
-*/
+
+
+
+
+
 
 
 
