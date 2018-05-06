@@ -41,6 +41,12 @@ also software!
             </a>
             &ndash;
             {% endif %}
+            {%if paper.type == "thesis" %}
+            <a class="publication-reference" href="{{paper.thesis-url}}" target="_blank">
+                <span class="thesis-reference"> {{ paper.thesis-reference }} </span>
+            </a>
+            &ndash;
+            {% endif %}
             {% if paper.arxiv-id %}
                 <a class="publication-arxiv-link" href="https://arxiv.org/abs/{{paper.arxiv-id}}" target="_blank">arXiv:{{paper.arxiv-id}}</a>
                 &ndash;
