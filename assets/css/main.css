@@ -266,6 +266,25 @@ main {
 }
 
 
+a.publication-title {
+    font-size: 15px;
+}
+a.publication-title:hover {
+    font-weight: 600;
+}
+
+.publication-row a { 
+    color: black;
+}
+.publication-row  a:hover { 
+    color: #4183c4;
+}
+
+
+
+
+
+
 .publication-details-table { 
     display: table;
     padding-top: 20px;
