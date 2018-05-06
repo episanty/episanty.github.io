@@ -343,6 +343,9 @@ ui.divider {
     padding: 2px 15px 2px 5px; /*trbl*/
     width: 140px;
 }
+.publications-details-cell.key.license {
+    vertical-align: middle;
+}
 
 div.publication-details-table a { 
     color: black;

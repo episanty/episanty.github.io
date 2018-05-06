@@ -74,6 +74,18 @@ layout: default
         {{ page.abstract }}
     </div>
     {% endif %}
+    {%if page.license %}
+    <div class="publication-details-row" id="publication-reference">
+        <div class="publications-details-cell key license">
+            license:
+        </div>
+        <div class="publications-details-cell value license">
+            <a href="https://creativecommons.org/licenses/{{ page.license | remove: 'cc-' }}/4.0/" target="_blank">
+                <img src="/assets/img/cc/{{ page.license }}.png" />
+            </a>
+        </div>
+    </div>
+    {% endif %}
     
     
     
