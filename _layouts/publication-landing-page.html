@@ -88,6 +88,15 @@ layout: default
         </div>
     </div>
     {% endif %}
+    {%if page.copyright %}
+    <div class="publication-details-row" id="publication-reference">
+        <div class="publications-details-cell key license">
+        </div>
+        <div class="publications-details-cell value license">
+            {{page.copyright}}
+        </div>
+    </div>
+    {% endif %}
     
     
     
