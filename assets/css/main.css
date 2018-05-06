@@ -298,8 +298,9 @@ a.publication-title:hover {
 }
 .publications-details-cell.key {
     text-align: right;
-    padding: 2px 15px 2px 5px; /*trbl*/
     font-weight: 600;
+    padding: 2px 15px 2px 5px; /*trbl*/
+    width: 140px;
 }
 
 div.publication-details-table a { 
