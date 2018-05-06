@@ -28,11 +28,13 @@ layout: default
             reference:
         </div>
         <div class="publications-details-cell value">
-            <a class="publication-reference" href="https://dx.doi.org/{{page.doi}}" target="_blank">
+            {% for identifier in page.identifiers %} {% if identifier.name=="doi" %}
+            <a class="publication-reference" href="https://dx.doi.org/{{identifier.value}}" target="_blank">
                 <span class="publication-journal"> {{ page.journal }} </span>
                 <span class="publication-volume"> {{ page.volume }} </span>
                 <span class="publication-details"> no. {{ page.number }}, {{page.page}} ({{ page.year }}) </span>
             </a>
+            {% endif %} {% endfor %}
         </div>
     </div>
     {% endif %}
