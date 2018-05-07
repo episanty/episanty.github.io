@@ -286,9 +286,30 @@ a.publication-title:hover {
     color: #4183c4;
 }
 
+/* /Publications-list internal table */
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Publications-list header */
 
 .publications-header-table { 
     display: table;
@@ -323,21 +344,28 @@ a.publication-title:hover {
     color: black;
 }
 
+/* /Publications-list header */
 
 
 
+
+
+
+/*  Publication landing page */
 
 .publication-details-table { 
     display: table;
     padding-top: 20px;
     width: 100%;
 }
-.publication-details-row { 
-    display: table-row; 
-}
 .publications-details-cell { 
     display: table-cell; 
 }
+.publication-details-row { 
+    display: table-row; 
+}
+
+
 .publications-details-cell.key {
     text-align: right;
     font-weight: 600;
@@ -369,15 +397,14 @@ a.publication-details-title {
     font-size: 15px;
 }
 
-
 .publication-details-row:hover {
     background-color: #EEEEEE;
 }
-.publication-details-row:hover .author-me { text-decoration: underline; }
+.publication-details-row:hover .author-me { 
+    text-decoration: underline; 
+}
 
-
-
-/* /publications */
+/* /publications landing page */
 
 
 
