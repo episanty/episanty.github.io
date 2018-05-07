@@ -22,6 +22,16 @@ layout: default
             {{page.author}}
         </div>
     </div>
+    {% if page.thesis-advisor %}
+    <div class="publication-details-row" id="publication-date">
+        <div class="publications-details-cell key">
+            advisor:
+        </div>
+        <div class="publications-details-cell value">
+            {{page.thesis-advisor}}
+        </div>
+    </div>
+    {% endif %}
     {%if page.journal %}
     <div class="publication-details-row" id="publication-reference">
         <div class="publications-details-cell key">
