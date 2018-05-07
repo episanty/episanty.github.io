@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+<div class="post-container">
+    <h1 class="post-title">{{ page.title }}</h1>
+    
+    <div class="publications-header-table">
+        <div class="publications-header-row"><div class="header-divider"></div></div>
+        <div class="publications-header-row">
+            <div class="publications-header-cell {% if page.selection == 'key-publications' %} selected {% endif%}">
+                <a href="/publications/key-publications">
+                    Key Publications
+                </a>
+            </div>
+            <div class="publications-header-cell {% if page.selection == 'all-publications' %} selected {% endif%}">
+                <a href="/publications">
+                    All Publications
+                </a>
+            </div>
+            <div class="publications-header-cell {% if page.selection == 'journal-publications' %} selected {% endif%}">
+                <a href="/publications/journal-publications">
+                    Journal Publications
+                </a>
+            </div>
+            <div class="publications-header-cell {% if page.selection == 'theses' %} selected {% endif%}">
+                <a href="/publications/theses">
+                    Theses
+                </a>
+            </div>
+            <div class="publications-header-cell {% if page.selection == 'code' %} selected {% endif%}">
+                <a href="/publications/code">
+                    Code
+                </a>
+            </div>
+        </div>
+        <div class="publications-header-row"><div class="header-divider"></div></div>
+    </div>
+
+
+    {{ content }}
+    
+    
+    <br/>
+</div>

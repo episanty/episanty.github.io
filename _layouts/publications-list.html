@@ -1,149 +1,110 @@
 ---
-layout: default
+layout: publications-list-header
 ---
 
-<div class="post-container">
-    <h1 class="post-title">{{ page.title }}</h1>
-    
-    <div class="publications-header-table">
-        <div class="publications-header-row"><div class="header-divider"></div></div>
-        <div class="publications-header-row">
-            <div class="publications-header-cell {% if page.selection == 'key-publications' %} selected {% endif%}">
-                <a href="/publications/key-publications">
-                    Key Publications
-                </a>
-            </div>
-            <div class="publications-header-cell {% if page.selection == 'all-publications' %} selected {% endif%}">
-                <a href="/publications">
-                    All Publications
-                </a>
-            </div>
-            <div class="publications-header-cell {% if page.selection == 'journal-publications' %} selected {% endif%}">
-                <a href="/publications/journal-publications">
-                    Journal Publications
-                </a>
-            </div>
-            <div class="publications-header-cell {% if page.selection == 'theses' %} selected {% endif%}">
-                <a href="/publications/theses">
-                    Theses
-                </a>
-            </div>
-            <div class="publications-header-cell {% if page.selection == 'code' %} selected {% endif%}">
-                <a href="/publications/code">
-                    Code
-                </a>
-            </div>
+
+<div class="publications-table">
+    {% assign publications_sorted = site.publications  | sort: 'publication-date' | reverse %}
+    {% for paper in publications_sorted %}
+
+    {% assign display-item = false %}
+    {% if paper.unlisted != "true" %}
+        {% if page.selection == "key-publications" and paper.key-publication == "true" %}
+            {% assign display-item = true %}
+        {% endif %}
+        {% if page.selection == "theses" and paper.type == "thesis" %}
+            {% assign display-item = true %}
+        {% endif %}
+        {% if page.selection == "journal-publications" and paper.type == "journal-paper" %}
+            {% assign display-item = true %}
+        {% endif %}
+        {% if page.selection == "code" and paper.type == "code" %}
+            {% assign display-item = true %}
+        {% endif %}
+        {% if page.selection == "all-publications" %}
+            {% assign display-item = true %}
+        {% endif %}
+    {% endif %}
+
+    {% if display-item == true %}
+
+    {% if paper.type == "journal-paper" or paper.type == "thesis" %}
+
+    <div class="publication-row">
+    <span class="publication-sub-row">
+        <div class="publication-title">
+            <a class="publication-title" href="{{paper.url}}">
+                {{ paper.title }}
+            </a>
         </div>
-        <div class="publications-header-row"><div class="header-divider"></div></div>
+    </span>
+    <span class="publication-sub-row">
+        <div class="publication-authors">
+            {{ paper.author }}
+        </div>
+    </span>
+    <span class="publication-sub-row">
+        <div class="publication-reference">
+            {%if paper.journal %}
+            {% for identifier in paper.identifiers %} {% if identifier.name=="doi" %}
+            <a class="publication-reference" href="https://dx.doi.org/{{identifier.value}}" target="_blank">
+                <span class="publication-journal"> {{ paper.journal }} </span>
+                <span class="publication-volume"> {{ paper.volume }} </span>
+                <span class="publication-details"> no. {{ paper.number }}, {{paper.page}} ({{ paper.year }}) </span>
+            </a>
+            &ndash;
+            {% endif %} {% endfor %}
+            {% endif %}
+            {%if paper.type == "thesis" %}
+            <a class="publication-reference" href="{{paper.thesis-url}}" target="_blank">
+                <span class="thesis-reference"> {{ paper.thesis-reference }} </span>
+            </a>
+            &ndash;
+            {% endif %}
+            {% for identifier in paper.identifiers %} {% if identifier.name=="arXiv id" %}
+                <a class="publication-arxiv-link" href="https://arxiv.org/abs/{{identifier.value}}" target="_blank">arXiv:{{identifier.value}}</a>
+                &ndash;
+            {% endif %} {% endfor %}
+            {% for identifier in paper.identifiers %} {% if identifier.name == "handle" and paper.type != "thesis" %}
+                <a class="publication-handle-link" href="http://hdl.handle.net/{{identifier.value}}" target="_blank">handle:{{identifier.value}}</a>
+                &ndash;
+            {% endif %} {% endfor %}
+            <a class="publication-pdf" href="publications/{{paper.pdf-filename}}" target="_blank"> 
+                <i class="far fa-file-pdf"></i> pdf
+            </a>
+        </div>
+    </span>
     </div>
 
+    {% endif %}
 
-    <div class="publications-table">
-        {% assign publications_sorted = site.publications  | sort: 'publication-date' | reverse %}
-        {% for paper in publications_sorted %}
-        
-        {% assign display-item = false %}
-        {% if paper.unlisted != "true" %}
-            {% if page.selection == "key-publications" and paper.key-publication == "true" %}
-                {% assign display-item = true %}
-            {% endif %}
-            {% if page.selection == "theses" and paper.type == "thesis" %}
-                {% assign display-item = true %}
-            {% endif %}
-            {% if page.selection == "journal-publications" and paper.type == "journal-paper" %}
-                {% assign display-item = true %}
-            {% endif %}
-            {% if page.selection == "code" and paper.type == "code" %}
-                {% assign display-item = true %}
-            {% endif %}
-            {% if page.selection == "all-publications" %}
-                {% assign display-item = true %}
-            {% endif %}
-        {% endif %}
-        
-        {% if display-item == true %}
-        
-        {% if paper.type == "journal-paper" or paper.type == "thesis" %}
-        
-        <div class="publication-row">
-        <span class="publication-sub-row">
-            <div class="publication-title">
-                <a class="publication-title" href="{{paper.url}}">
-                    {{ paper.title }}
-                </a>
-            </div>
-        </span>
-        <span class="publication-sub-row">
-            <div class="publication-authors">
-                {{ paper.author }}
-            </div>
-        </span>
-        <span class="publication-sub-row">
-            <div class="publication-reference">
-                {%if paper.journal %}
-                {% for identifier in paper.identifiers %} {% if identifier.name=="doi" %}
-                <a class="publication-reference" href="https://dx.doi.org/{{identifier.value}}" target="_blank">
-                    <span class="publication-journal"> {{ paper.journal }} </span>
-                    <span class="publication-volume"> {{ paper.volume }} </span>
-                    <span class="publication-details"> no. {{ paper.number }}, {{paper.page}} ({{ paper.year }}) </span>
-                </a>
-                &ndash;
-                {% endif %} {% endfor %}
-                {% endif %}
-                {%if paper.type == "thesis" %}
-                <a class="publication-reference" href="{{paper.thesis-url}}" target="_blank">
-                    <span class="thesis-reference"> {{ paper.thesis-reference }} </span>
-                </a>
-                &ndash;
-                {% endif %}
-                {% for identifier in paper.identifiers %} {% if identifier.name=="arXiv id" %}
-                    <a class="publication-arxiv-link" href="https://arxiv.org/abs/{{identifier.value}}" target="_blank">arXiv:{{identifier.value}}</a>
-                    &ndash;
-                {% endif %} {% endfor %}
-                {% for identifier in paper.identifiers %} {% if identifier.name == "handle" and paper.type != "thesis" %}
-                    <a class="publication-handle-link" href="http://hdl.handle.net/{{identifier.value}}" target="_blank">handle:{{identifier.value}}</a>
-                    &ndash;
-                {% endif %} {% endfor %}
-                <a class="publication-pdf" href="publications/{{paper.pdf-filename}}" target="_blank"> 
-                    <i class="far fa-file-pdf"></i> pdf
-                </a>
-            </div>
-        </span>
+    {% if paper.type == "code" %}
+
+    <div class="publication-row">
+    <span class="publication-sub-row">
+        <div class="publication-title">
+            <a class="publication-title" href="{{paper.url}}">
+                {{ paper.title }}
+            </a>
         </div>
-        
-        {% endif %}
-        
-        {% if paper.type == "code" %}
-        
-        <div class="publication-row">
-        <span class="publication-sub-row">
-            <div class="publication-title">
-                <a class="publication-title" href="{{paper.url}}">
-                    {{ paper.title }}
-                </a>
-            </div>
-        </span>
-        <span class="publication-sub-row">
-            <div class="publication-authors">
-                {{ paper.author }}
-            </div>
-        </span>
-        <span class="publication-sub-row">
-            <div class="code-url">
-                <a href="https://github.com/{{paper.github-id}}" target="_blank">
-                    github.com/{{paper.github-id}}
-                </a>
-            </div>
-        </span>
+    </span>
+    <span class="publication-sub-row">
+        <div class="publication-authors">
+            {{ paper.author }}
         </div>
-        
-        {% endif %}
-        
-        
-        {% endif %}
-        {% endfor %}
+    </span>
+    <span class="publication-sub-row">
+        <div class="code-url">
+            <a href="https://github.com/{{paper.github-id}}" target="_blank">
+                github.com/{{paper.github-id}}
+            </a>
+        </div>
+    </span>
     </div>
-    
-    
-    <br/>
+
+    {% endif %}
+
+
+    {% endif %}
+    {% endfor %}
 </div>
