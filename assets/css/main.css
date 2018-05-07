@@ -266,6 +266,12 @@ main {
 }
 
 
+.publication-year-mid-row {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+
 a.publication-title {
     font-size: 15px;
 }
@@ -279,6 +285,7 @@ a.publication-title:hover {
 .publication-row  a:hover { 
     color: #4183c4;
 }
+
 
 
 

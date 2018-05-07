@@ -4,6 +4,11 @@ layout: publications-list-header
 
 
 <div class="publications-table">
+    
+    
+    {% assign previous-row-year = 2030 %}
+    
+    
     {% assign publications_sorted = site.publications  | sort: 'publication-date' | reverse %}
     {% for paper in publications_sorted %}
 
@@ -27,6 +32,20 @@ layout: publications-list-header
     {% endif %}
 
     {% if display-item == true %}
+    
+    
+    {% assign this-row-year = paper.year %}
+    {% if previous-row-year != this-row-year %}
+    {% if page.selection == "journal-publications" or page.selection == "all-publications" %}
+        <div class="publication-row">
+            <div class="publication-year-mid-row">
+                {{this-row-year}}
+            </div>
+        </div>
+    {% endif %}
+    {% endif %}
+    {% assign previous-row-year = this-row-year %}
+
 
     {% if paper.type == "journal-paper" or paper.type == "thesis" %}
 
