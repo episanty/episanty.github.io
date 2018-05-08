@@ -29,7 +29,7 @@ To do:
         </div>
     </div>
     {% if page.thesis-advisor %}
-    <div class="publication-details-row" id="publication-date">
+    <div class="publication-details-row" id="publication-thesis-advisor">
         <div class="publications-details-cell key">
             advisor:
         </div>
@@ -65,7 +65,7 @@ To do:
     </div>
     {% endif %}
     {% for identifier in page.identifiers %}
-    <div class="publication-details-row" id="publication-reference">
+    <div class="publication-details-row publication-identifier">
         <div class="publications-details-cell key">
             {{ identifier.name }}:
         </div>
@@ -74,7 +74,7 @@ To do:
         </div>
     </div>
     {% endfor %}
-    <div class="publication-details-row" id="publication-title">
+    <div class="publication-details-row" id="publication-pdf">
         <div class="publications-details-cell key">
             pdf:
         </div>
@@ -85,7 +85,7 @@ To do:
         </div>
     </div>
     {%if page.abstract %}
-    <div class="publication-details-row" id="publication-reference">
+    <div class="publication-details-row" id="publication-abstract">
         <div class="publications-details-cell key">
             abstract:
         </div>
@@ -95,7 +95,7 @@ To do:
     </div>
     {% endif %}
     {%if page.license %}
-    <div class="publication-details-row" id="publication-reference">
+    <div class="publication-details-row" id="publication-license">
         <div class="publications-details-cell key license">
             license:
         </div>
@@ -107,7 +107,7 @@ To do:
     </div>
     {% endif %}
     {%if page.copyright %}
-    <div class="publication-details-row" id="publication-reference">
+    <div class="publication-details-row" id="publication-copyright">
         <div class="publications-details-cell key license">
         </div>
         <div class="publications-details-cell value license">
