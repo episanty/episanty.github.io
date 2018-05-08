@@ -22,3 +22,6 @@ paginate: 15
 baseurl: /
 plugins_dir: [jekyll-gist]
 permalink: /:year/:month/:title.html
+
+
+plugins_dir: "_plugins"
