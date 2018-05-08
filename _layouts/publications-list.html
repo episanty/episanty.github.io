@@ -56,7 +56,9 @@ layout: publications-list-header
     <span>
         {% capture thumbnailExists %}{% file_exists _publications/thumbnails/{{ paper.id | remove: '/publications/' | remove: 'code/' }}.png %}{% endcapture %}
         {% if thumbnailExists=="true" %}
-            <img src="/publications/thumbnails/{{ paper.id | remove: '/publications/' | remove: 'code/' }}.png" />
+            <a  href="{{paper.url}}">
+                <img src="/publications/thumbnails/{{ paper.id | remove: '/publications/' | remove: 'code/' }}.png" />
+            </a>
         {% endif %}
     </span>
     </div>
