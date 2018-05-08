@@ -54,7 +54,10 @@ layout: publications-list-header
     
     <div class="publication-thumbnail">
     <span>
-        <img src="/publications/thumbnails/PhysRevA.96.063401.png" />
+        {% capture thumbnailExists %}{% file_exists _publications/thumbnails/{{ paper.id | remove: '/publications/' | remove: 'code/' }}.png %}{% endcapture %}
+        {% if thumbnailExists=="true" %}
+            <img src="/publications/thumbnails/{{ paper.id | remove: '/publications/' | remove: 'code/' }}.png" />
+        {% endif %}
     </span>
     </div>
     
