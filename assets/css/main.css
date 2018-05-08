@@ -267,9 +267,10 @@ main {
 
 .publication-thumbnail {
     padding: 4px 7px 4px 2px; /*trbl*/
+    width: 60px;
 }
 .publication-thumbnail img {
-    max-width: 60px;
+    width: 60px;
     max-height: 60px;
     vertical-align: middle;
 }
