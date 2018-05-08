@@ -238,13 +238,42 @@ main {
 
 
 
-/* publications */
 
+
+
+
+
+
+/* Publications-list internal table */
+.publications-table {
+    display: grid;
+}
 .publication-row {
+    display: table-row;
     padding-top: 7px;
     padding-bottom: 7px;
     padding-left: 10px;
 }
+.publication-thumbnail {
+    float: left; 
+    display: table-cell; 
+}
+.publication-details-cell {
+    display: table-cell; 
+}
+.publication-details-row {
+    display: table; 
+}
+
+.publication-thumbnail {
+    padding: 4px 7px 4px 2px; /*trbl*/
+}
+.publication-thumbnail img {
+    max-width: 60px;
+    max-height: 60px;
+    vertical-align: middle;
+}
+
 
 .publication-row:hover {
     background-color: #EEEEEE;

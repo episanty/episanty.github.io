@@ -47,9 +47,20 @@ layout: publications-list-header
     {% assign previous-row-year = this-row-year %}
 
 
-    {% if paper.type == "journal-paper" or paper.type == "thesis" %}
 
+    
+    
     <div class="publication-row">
+    
+    <div class="publication-thumbnail">
+    <span>
+        <img src="/publications/thumbnails/PhysRevA.96.063401.png" />
+    </span>
+    </div>
+    
+    {% if paper.type == "journal-paper" or paper.type == "thesis" %}
+    <div class="publication-details-cell">
+    <div class="publication-details-row">
     <span class="publication-sub-row">
         <div class="publication-title">
             <a class="publication-title" href="{{paper.url}}">
@@ -88,18 +99,18 @@ layout: publications-list-header
                 <a class="publication-handle-link" href="http://hdl.handle.net/{{identifier.value}}" target="_blank">handle:{{identifier.value}}</a>
                 &ndash;
             {% endif %} {% endfor %}
-            <a class="publication-pdf" href="publications/{{paper.pdf-filename}}" target="_blank"> 
+            <a class="publication-pdf" href="{{paper.pdf-filename}}" target="_blank"> 
                 <i class="far fa-file-pdf"></i> pdf
             </a>
         </div>
     </span>
     </div>
-
+    </div>
     {% endif %}
 
     {% if paper.type == "code" %}
-
-    <div class="publication-row">
+    <div class="publication-details-cell">
+    <div class="publication-details-row">
     <span class="publication-sub-row">
         <div class="publication-title">
             <a class="publication-title" href="{{paper.url}}">
@@ -120,8 +131,10 @@ layout: publications-list-header
         </div>
     </span>
     </div>
-
+    </div>
     {% endif %}
+    
+    </div>
 
 
     {% endif %}
