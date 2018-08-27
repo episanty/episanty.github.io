@@ -5,6 +5,9 @@ collections:
   publications:
     output: true
     permalink: /publications/:path
+  about:
+    output: true
+    permalink: /about/:path
   front-page-cards:
     output: false
 
