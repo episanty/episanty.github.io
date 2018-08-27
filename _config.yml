@@ -2,14 +2,17 @@ title : Emilio Pisanty
 description: 'Quantum physicist'
 
 collections: 
+  front-page-cards:
+    output: false
   publications:
     output: true
     permalink: /publications/:path
   about:
     output: true
     permalink: /about/:path
-  front-page-cards:
-    output: false
+  gallery:
+    output: true
+    permalink: /gallery/:path
 
 defaults:
   - scope:
