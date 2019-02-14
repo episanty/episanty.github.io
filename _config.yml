@@ -23,6 +23,7 @@ defaults:
 
 markdown: kramdown
 highlighter: rouge
+plugins: [jekyll-paginate]
 logo: false
 paginate: 15
 baseurl: /
