@@ -1,0 +1,214 @@
+<html> 
+<head> 
+<title>Supplementary Information</title> 			
+
+<!-- X3DOM inclusions -->
+<script type='text/javascript' src='x3dom.js'></script> 
+<link rel='stylesheet' type='text/css' href='x3dom.css'></link> 
+
+<!-- MathJax -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> 
+
+
+<style type="text/css">
+#central-column { 
+  background-color: #fffff;
+  width: 900px;
+  margin: 0px auto;
+  height: 100%;
+  text-align: left;
+  padding-bottom: 150px;
+  }
+#content {
+  margin-top: 50px;    
+  margin-left: 30px;
+  width: 800px;
+  }
+body {
+  background: #ffffff url(background.png) no-repeat scroll center top;
+  color: #303030;
+  font-family: Helvetica,Tahoma,sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-size: 84%;
+  font-size-adjust: none;
+  font-stretch: normal;
+  line-height: 1.4em;
+}
+x3d{
+  background: rgba(240, 240, 240, 0.4);
+}
+.viewpoint-buttons{
+  margin: 15px 0;
+  display: inline-block;
+}
+
+.figure-description{
+  padding-bottom: 10px;
+}
+
+#figure-s4{
+  padding-bottom: 400px;
+}
+
+#footer{
+  padding-bottom: 10px;
+}
+
+.citation{
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+#mathjax-own-commands{
+  display: none;
+}
+
+a:link {
+    color: #000099;
+    text-decoration: none;
+}
+a:visited {
+    color: #000033;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+</style>
+
+
+
+<script type="text/javascript" >
+function setViewPoint(figureId,viewPointId) {
+	document.getElementById(figureId+'-'+'undefined').setAttribute('set_bind','true');  // To allow re-setting of viewpoints
+	document.getElementById(figureId+'-'+viewPointId).setAttribute('set_bind','true');
+}
+
+function toggleS4PlotRange() {
+   if (document.getElementById('S3switcherForS4PlotRange').getAttribute('whichChoice')==1) {
+   	showS4PlotRange();
+   } else {
+   	hideS4PlotRange();
+	}
+}
+function showS4PlotRange() {
+   document.getElementById('S3switcherForS4PlotRange').setAttribute('whichChoice','0');
+   document.getElementById('S3InnerBoxToggleButton').firstChild.data = "Hide Fig. S4 range";
+}
+function hideS4PlotRange() {
+   document.getElementById('S3switcherForS4PlotRange').setAttribute('whichChoice','1');
+   document.getElementById('S3InnerBoxToggleButton').firstChild.data = "Show Fig. S4 range";
+}
+
+var s4ActiveCycle;
+s4ActiveCycle=5;
+
+function s4saddleBcycle(){
+   if (s4ActiveCycle==5){
+      s4ActiveCycle=2;
+   } else {
+      s4ActiveCycle=s4ActiveCycle+1;
+   };
+   setViewPoint('S4','saddle-2-'+s4ActiveCycle);
+}
+</script>
+
+
+
+</head> 
+
+<body>
+
+<!-- MathJax own commands -->
+<div id="mathjax-own-commands">
+$$
+\newcommand{\vb}[1]{\mathbf{#1}}
+  \newcommand{\vbv}{\vb{v}}
+  \newcommand{\vbr}{\vb{r}}
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+$$
+</div>
+
+
+<div id="central-column">
+<div id="content">
+
+    
+<h1>Supplementary Information</h1>
+<div id="introduction">
+<p>
+You should see a manipulatable 3D figure below. This document uses WebGL and X3DOM to run and should work on recent versions of Chrome (<a href="http://www.chrome-allow-file-access-from-file.com/">allowing access local files</a>), Firefox, Safari and Internet Explorer.
+To check whether your browser supports X3DOM <a href="http://www.x3dom.org/check/" >click here</a>; for more browser information <a href="http://www.x3dom.org/contact/" >see here</a>.
+If the graphs below don't work try <a href="http://www.x3dom.org/nodes/" >downloading the latest version of x3dom</a>.
+</p>
+</div>
+
+<div id="navigation-instructions">
+<div id="navigation-title">
+  <h3>Navigation</h3>
+</div>
+<div id="navigation-content">
+Use the left mouse button to rotate the object and the middle mouse button to pan. Zoom with the mouse wheel or the right mouse button. Double click to set the center of rotation.
+</div>
+</div>
+
+
+
+
+
+
+<div class="figure-container" id="figure-s2">
+<div class="figure-title" id="figure-s2-title">
+  <h2>Figure S2</h2>
+</div>
+<div class="3dfigure" id="figure-s2-figure">
+<x3d width='800px' height='500px'>
+  <scene>
+   <Viewpoint id="test-viewpoint" position="17.5 105 50" orientation="0.6 0.5 0.6 4.1" centerOfRotation="4 0.5 50"  description="camera"></Viewpoint>
+   <PointLight id='point' on='TRUE' intensity='0.9000' color='0.0 0.6 0.0' location='0 10 0.5 ' radius='5.0000' >  </PointLight>
+   <transform translation='-4.,0,0' scale='0.62 1. 1.'>
+     <Inline url="test.x3d" />
+   </transform>
+  </scene>
+</x3d>
+</div>
+</div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="footer">
+&copy; Emilio Pisanty, 2020.
+</div>
+	
+</div><!-- #central-column -->
+</div><!-- #content -->
+</body>
+</html>
