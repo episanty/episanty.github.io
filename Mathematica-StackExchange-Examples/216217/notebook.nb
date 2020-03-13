@@ -1,0 +1,758 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     29559,        750]
+NotebookOptionsPosition[     24561,        655]
+NotebookOutlinePosition[     24909,        670]
+CellTagsIndexPosition[     24866,        667]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.793097790712677*^9, 
+  3.7930977914965854`*^9}},ExpressionUUID->"ae11e8ba-dd62-4813-b254-\
+c2fcd685bbf3"],
+
+Cell[BoxData[
+ RowBox[{"plot", "=", 
+  RowBox[{"Plot3D", "[", 
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["x", "2"], "+", 
+     SuperscriptBox["y", "2"]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", 
+      RowBox[{"-", "1"}], ",", "1"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", 
+      RowBox[{"-", "1"}], ",", "1"}], "}"}], ",", 
+    RowBox[{"PlotRange", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "1"}], "}"}]}], ",", 
+    RowBox[{"ClippingStyle", "\[Rule]", "None"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.793097793668785*^9, 
+  3.793097848059376*^9}},ExpressionUUID->"f300b5fd-ae2a-49b2-ba28-\
+3dd1cdd5c68d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", 
+  RowBox[{
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"NotebookDirectory", "[", "]"}], ",", "\"\<plot1.x3d\>\""}], 
+     "}"}], "]"}], ",", "plot"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7930978516208544`*^9, 3.79309786934548*^9}, 
+   3.7931012595387697`*^9},ExpressionUUID->"5c3665b5-fb7c-4b5b-919e-\
+7ce4cd7d7b23"],
+
+Cell[BoxData["\<\"C:\\\\Users\\\\episanty\\\\Desktop\\\\test3d\\\\plot1.x3d\"\
+\>"], "Output",
+ CellChangeTimes->{3.793097872702499*^9, 
+  3.7931012629167376`*^9},ExpressionUUID->"2989b8b2-d89d-40db-b2d2-\
+3e80b5a9b577"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.7931000290759287`*^9, 
+  3.7931000291956067`*^9}},ExpressionUUID->"54e10095-680d-4093-b4b7-\
+37c8f55ad33b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"NotebookDirectory", "[", "]"}], ",", "\"\<plot2.x3d\>\""}], 
+     "}"}], "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"x3dScene", "[", 
+    RowBox[{"Join", "[", "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{
+       RowBox[{"getSurfacesFromX3D", "[", "\[IndentingNewLine]", 
+        RowBox[{"cleanX3Dscene", "[", 
+         RowBox[{"plotToXML", "[", "plot", "]"}], "]"}], 
+        "\[IndentingNewLine]", "]"}], ","}], "*)"}], "\[IndentingNewLine]", 
+     RowBox[{"removeX3DcolorSpec", "/@", 
+      RowBox[{"getLinesFromX3D", "[", "\[IndentingNewLine]", 
+       RowBox[{"cleanX3Dscene", "[", 
+        RowBox[{"plotToXML", "[", "plot", "]"}], "]"}], "\[IndentingNewLine]",
+        "]"}]}], "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", "]"}], 
+   "\[IndentingNewLine]", ",", "\"\<XML\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.7931012575640783`*^9, 3.793101270521411*^9}, {
+  3.793101346738467*^9, 
+  3.7931014044060364`*^9}},ExpressionUUID->"85e68d4b-346f-4aae-a7e1-\
+876f7f314e89"],
+
+Cell[BoxData["\<\"C:\\\\Users\\\\episanty\\\\Desktop\\\\test3d\\\\plot2.x3d\"\
+\>"], "Output",
+ CellChangeTimes->{3.7931012754661894`*^9, 3.7931013669713507`*^9, 
+  3.7931014073661213`*^9},ExpressionUUID->"9cc4d3db-3cd0-4f9f-9182-\
+afec4a4b75c7"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"NotebookDirectory", "[", "]"}], ",", "\"\<plot2.x3d\>\""}], 
+     "}"}], "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"x3dScene", "[", 
+    RowBox[{"Flatten", "[", "\[IndentingNewLine]", 
+     RowBox[{"Map", "[", "\[IndentingNewLine]", 
+      RowBox[{"(*", 
+       RowBox[{"replaceX3DcolorSpec", "[", 
+        RowBox[{"#", ",", "Orange"}], "]"}], "*)"}], 
+      RowBox[{
+       RowBox[{"#", "&"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"getSurfacesFromX3D", "[", "\[IndentingNewLine]", 
+        RowBox[{"cleanX3Dscene", "[", 
+         RowBox[{"plotToXML", "[", "plot", "]"}], "]"}], 
+        "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "]"}], 
+     "\[IndentingNewLine]", "]"}], "]"}], "\[IndentingNewLine]", ",", 
+   "\"\<XML\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.793101425499645*^9, 3.793101428727019*^9}, {
+  3.7931014794504223`*^9, 
+  3.793101533641162*^9}},ExpressionUUID->"b4a8cb0c-88de-4377-8362-\
+296a1100a255"],
+
+Cell[BoxData["\<\"C:\\\\Users\\\\episanty\\\\Desktop\\\\test3d\\\\plot2.x3d\"\
+\>"], "Output",
+ CellChangeTimes->{
+  3.793101432267553*^9, {3.793101504629116*^9, 
+   3.7931015364142632`*^9}},ExpressionUUID->"458c5aa9-ac42-43a6-948b-\
+74cf1c1b67ef"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"NotebookDirectory", "[", "]"}], ",", "\"\<plot2.x3d\>\""}], 
+     "}"}], "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"x3dScene", "[", "\[IndentingNewLine]", 
+    RowBox[{"getSurfacesFromX3D", "[", "\[IndentingNewLine]", 
+     RowBox[{"cleanX3Dscene", "[", 
+      RowBox[{"plotToXML", "[", "plot", "]"}], "]"}], "\[IndentingNewLine]", 
+     "]"}], "]"}], "\[IndentingNewLine]", ",", "\"\<XML\>\""}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.79310154562106*^9, 
+  3.7931015486729*^9}},ExpressionUUID->"879ef5c5-abd5-49f5-8c53-4ca2ae17119f"],
+
+Cell[BoxData["\<\"C:\\\\Users\\\\episanty\\\\Desktop\\\\test3d\\\\plot2.x3d\"\
+\>"], "Output",
+ CellChangeTimes->{3.7931015524887247`*^9, 
+  3.7931016053844748`*^9},ExpressionUUID->"28070c5d-fc83-4529-b1f0-\
+b27eb43ad856"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"NotebookDirectory", "[", "]"}], ",", "\"\<plot2.x3d\>\""}], 
+     "}"}], "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"x3dScene", "[", "\[IndentingNewLine]", 
+    RowBox[{"removeX3DcolorSpec", "/@", 
+     RowBox[{"getLinesFromX3D", "[", "\[IndentingNewLine]", 
+      RowBox[{"cleanX3Dscene", "[", 
+       RowBox[{"plotToXML", "[", "plot", "]"}], "]"}], "\[IndentingNewLine]", 
+      "]"}]}], "]"}], "\[IndentingNewLine]", ",", "\"\<XML\>\""}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.7931015684310827`*^9, 
+  3.793101583426996*^9}},ExpressionUUID->"93de611e-5000-4326-8ac0-\
+f56b2bc356df"],
+
+Cell[BoxData["\<\"C:\\\\Users\\\\episanty\\\\Desktop\\\\test3d\\\\plot2.x3d\"\
+\>"], "Output",
+ CellChangeTimes->{{3.7931015729749355`*^9, 
+  3.7931015869445915`*^9}},ExpressionUUID->"83fa3336-e820-41da-8552-\
+afe058f817fe"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"NotebookDirectory", "[", "]"}], ",", "\"\<plot2.x3d\>\""}], 
+     "}"}], "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"x3dScene", "[", "\[IndentingNewLine]", 
+    RowBox[{"Map", "[", "\[IndentingNewLine]", 
+     RowBox[{"removeX3DcolorSpec", ",", "\[IndentingNewLine]", 
+      RowBox[{"getLinesFromX3D", "[", 
+       RowBox[{"cleanX3Dscene", "[", 
+        RowBox[{"plotToXML", "[", "plot", "]"}], "]"}], "]"}]}], 
+     "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", "]"}], 
+   "\[IndentingNewLine]", ",", "\"\<XML\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.7931018874288607`*^9, 
+  3.7931018975567813`*^9}},ExpressionUUID->"99d1e039-8a9a-47b7-9ff7-\
+dcbb4755273c"],
+
+Cell[BoxData["\<\"C:\\\\Users\\\\episanty\\\\Desktop\\\\test3d\\\\plot2.x3d\"\
+\>"], "Output",
+ CellChangeTimes->{
+  3.7931019005416255`*^9},ExpressionUUID->"1e1f9449-5bfa-4e2d-82bc-\
+2db52a202706"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"NotebookDirectory", "[", "]"}], ",", "\"\<plot2.x3d\>\""}], 
+     "}"}], "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"x3dScene", "[", 
+    RowBox[{"Flatten", "[", 
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"getSurfacesFromX3D", "[", 
+        RowBox[{"cleanX3Dscene", "[", 
+         RowBox[{"plotToXML", "[", "plot", "]"}], "]"}], "]"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"removeX3DcolorSpec", "/@", 
+        RowBox[{"getLinesFromX3D", "[", 
+         RowBox[{"cleanX3Dscene", "[", 
+          RowBox[{"plotToXML", "[", "plot", "]"}], "]"}], "]"}]}]}], 
+      "\[IndentingNewLine]", "}"}], "]"}], "]"}], "\[IndentingNewLine]", ",", 
+   "\"\<XML\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.7931016877224417`*^9, 
+  3.7931017304989014`*^9}},ExpressionUUID->"e01478e1-e266-4b34-98ce-\
+0cc6ab1dba1f"],
+
+Cell[BoxData["\<\"C:\\\\Users\\\\episanty\\\\Desktop\\\\test3d\\\\plot2.x3d\"\
+\>"], "Output",
+ CellChangeTimes->{
+  3.7931017063795395`*^9, {3.7931017366943383`*^9, 
+   3.7931017615658517`*^9}},ExpressionUUID->"8247f3e7-4252-49df-a87f-\
+4e48215a0a46"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.793101979222161*^9, 
+  3.7931019795303364`*^9}},ExpressionUUID->"b718875f-5757-4de0-ace3-\
+e2546d876d06"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"NotebookDirectory", "[", "]"}], ",", "\"\<plot2.x3d\>\""}], 
+     "}"}], "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"x3dScene", "[", 
+    RowBox[{"Flatten", "[", 
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{"Map", "[", "\[IndentingNewLine]", 
+       RowBox[{"removeX3DcolorSpec", ",", "\[IndentingNewLine]", 
+        RowBox[{"getLinesFromX3D", "[", 
+         RowBox[{"cleanX3Dscene", "[", 
+          RowBox[{"plotToXML", "[", "plot", "]"}], "]"}], "]"}]}], 
+       "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", "}"}], "]"}], 
+    "]"}], "\[IndentingNewLine]", ",", "\"\<XML\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.793101984121067*^9, 
+  3.793101989532601*^9}},ExpressionUUID->"b2b745dc-d605-4bec-82b1-\
+724e10061a82"],
+
+Cell[BoxData["\<\"C:\\\\Users\\\\episanty\\\\Desktop\\\\test3d\\\\plot2.x3d\"\
+\>"], "Output",
+ CellChangeTimes->{
+  3.7931019930132933`*^9},ExpressionUUID->"62af570f-ab79-4971-92f3-\
+0ebcc58d7cdc"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"NotebookDirectory", "[", "]"}], ",", "\"\<plot2.x3d\>\""}], 
+     "}"}], "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"x3dScene", "[", 
+    RowBox[{"Flatten", "[", 
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Map", "[", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"#", "&"}], ",", "\[IndentingNewLine]", 
+         RowBox[{"getSurfacesFromX3D", "[", 
+          RowBox[{"cleanX3Dscene", "[", 
+           RowBox[{"plotToXML", "[", "plot", "]"}], "]"}], "]"}]}], 
+        "\[IndentingNewLine]", "]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"Map", "[", "\[IndentingNewLine]", 
+        RowBox[{"removeX3DcolorSpec", ",", "\[IndentingNewLine]", 
+         RowBox[{"getLinesFromX3D", "[", 
+          RowBox[{"cleanX3Dscene", "[", 
+           RowBox[{"plotToXML", "[", "plot", "]"}], "]"}], "]"}]}], 
+        "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "}"}], "]"}], 
+    "]"}], "\[IndentingNewLine]", ",", "\"\<XML\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.793102004872596*^9, 
+  3.7931020293621264`*^9}},ExpressionUUID->"751bb289-ac0d-4528-aff5-\
+7d73f1bad27a"],
+
+Cell[BoxData["\<\"C:\\\\Users\\\\episanty\\\\Desktop\\\\test3d\\\\plot2.x3d\"\
+\>"], "Output",
+ CellChangeTimes->{{3.793102015245861*^9, 
+  3.793102034765686*^9}},ExpressionUUID->"e2acec7f-3ccd-47a2-a587-\
+fb21a746ddd4"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"NotebookDirectory", "[", "]"}], ",", "\"\<plot2.x3d\>\""}], 
+     "}"}], "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"x3dScene", "[", 
+    RowBox[{"Flatten", "[", 
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Map", "[", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"replaceX3DcolorSpec", "[", 
+           RowBox[{"#", ",", "Orange"}], "]"}], "&"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"getSurfacesFromX3D", "[", 
+          RowBox[{"cleanX3Dscene", "[", 
+           RowBox[{"plotToXML", "[", "plot", "]"}], "]"}], "]"}]}], 
+        "\[IndentingNewLine]", "]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"Map", "[", "\[IndentingNewLine]", 
+        RowBox[{"removeX3DcolorSpec", ",", "\[IndentingNewLine]", 
+         RowBox[{"getLinesFromX3D", "[", 
+          RowBox[{"cleanX3Dscene", "[", 
+           RowBox[{"plotToXML", "[", "plot", "]"}], "]"}], "]"}]}], 
+        "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "}"}], "]"}], 
+    "]"}], "\[IndentingNewLine]", ",", "\"\<XML\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.793102095366211*^9, 
+  3.793102105198925*^9}},ExpressionUUID->"c59432b6-c57a-435c-ad0c-\
+173fddaec244"],
+
+Cell[BoxData["\<\"C:\\\\Users\\\\episanty\\\\Desktop\\\\test3d\\\\plot2.x3d\"\
+\>"], "Output",
+ CellChangeTimes->{
+  3.79310211051697*^9},ExpressionUUID->"70df5045-aa7c-4bda-9018-68459ffec232"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.79310004948679*^9, 3.7931000495855536`*^9}, {
+  3.79310198185014*^9, 
+  3.793101982452526*^9}},ExpressionUUID->"1e4ff531-9454-42eb-9d5e-\
+51d6df77f722"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"removeX3DcolorSpec", "[", "xmlElement_", "]"}], ":=", 
+  RowBox[{"DeleteCases", "[", 
+   RowBox[{"xmlElement", ",", 
+    RowBox[{"XMLElement", "[", 
+     RowBox[{"\"\<Color\>\"", ",", "_", ",", "_"}], "]"}], ",", 
+    "\[Infinity]"}], "]"}]}]], "Input",
+ InitializationCell->
+  True,ExpressionUUID->"51722d19-2643-42ba-b754-f7bfd3834681"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"replaceX3DcolorSpec", "[", 
+   RowBox[{"xmlElement_", ",", "replacementColor_"}], "]"}], ":=", 
+  RowBox[{"Block", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"xmlElementTemp", "=", "xmlElement"}], "}"}], ",", 
+    "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{"re", "-", 
+      RowBox[{"set", " ", "the", " ", "colorPerVertex", " ", "value"}]}], 
+     "*)"}], "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"xmlElementTemp", "=", 
+      RowBox[{"ReplaceAll", "[", 
+       RowBox[{"xmlElementTemp", ",", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"\"\<colorPerVertex\>\"", "\[Rule]", "\"\<true\>\""}], 
+          ")"}], "\[Rule]", 
+         RowBox[{"(", 
+          RowBox[{"\"\<colorPerVertex\>\"", "\[Rule]", "\"\<false\>\""}], 
+          ")"}]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+     "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{"delete", " ", "existing", " ", "color", " ", "tags"}], "*)"}], 
+     "\[IndentingNewLine]", 
+     RowBox[{"xmlElementTemp", "=", 
+      RowBox[{"DeleteCases", "[", 
+       RowBox[{"xmlElementTemp", ",", 
+        RowBox[{"XMLElement", "[", 
+         RowBox[{"\"\<Color\>\"", ",", "_", ",", "_"}], "]"}], ",", 
+        "\[Infinity]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+     "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{"insert", " ", "new", " ", "appearance", " ", "tag"}], "*)"}], 
+     "\[IndentingNewLine]", 
+     RowBox[{"xmlElementTemp", "=", 
+      RowBox[{"Insert", "[", 
+       RowBox[{"xmlElementTemp", ",", 
+        RowBox[{"xmlAppearanceFromColor", "[", "replacementColor", "]"}], ",", 
+        RowBox[{"Position", "[", 
+         RowBox[{"xmlElementTemp", ",", 
+          RowBox[{"XMLElement", "[", 
+           RowBox[{"\"\<IndexedFaceSet\>\"", ",", "_", ",", "_"}], "]"}]}], 
+         "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     "xmlElementTemp"}]}], "\[IndentingNewLine]", "]"}]}]], "Input",
+ InitializationCell->
+  True,ExpressionUUID->"549a0a06-10eb-47b7-af27-00e7e9229ae2"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"xmlAppearanceFromColor", "[", "color_", "]"}], ":=", 
+  RowBox[{"XMLElement", "[", 
+   RowBox[{"\"\<Appearance\>\"", ",", 
+    RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"XMLElement", "[", 
+      RowBox[{"\"\<Material\>\"", ",", 
+       RowBox[{"{", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"\"\<diffuseColor\>\"", "\[Rule]", 
+          RowBox[{"StringJoin", "@@", 
+           RowBox[{"Riffle", "[", 
+            RowBox[{
+             RowBox[{"ToString", "/@", 
+              RowBox[{"List", "@@", 
+               RowBox[{"ColorConvert", "[", 
+                RowBox[{"color", ",", "\"\<RGB\>\""}], "]"}]}]}], ",", 
+             "\"\< \>\""}], "]"}]}]}], "\[IndentingNewLine]", ",", 
+         RowBox[{"\"\<specularColor\>\"", "\[Rule]", "\"\<1. 1. 1.\>\""}], 
+         ",", 
+         RowBox[{"\"\<shininess\>\"", "\[Rule]", "\"\<0.9\>\""}]}], 
+        "\[IndentingNewLine]", "}"}], ",", 
+       RowBox[{"{", "}"}]}], "]"}], "}"}]}], "]"}]}]], "Input",
+ InitializationCell->
+  True,ExpressionUUID->"18fa0968-6e36-4efe-af94-c47917818219"],
+
+Cell[CellGroupData[{
+
+Cell["getSurfacesFromX3D", "Subsubsection",ExpressionUUID->"3acb2dde-0b46-41ce-818c-70cfa9339d20"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"getSurfacesFromX3D", "[", "x3dInputInXML_", "]"}], ":=", 
+  RowBox[{"Cases", "[", "\[IndentingNewLine]", 
+   RowBox[{"x3dInputInXML", ",", "\[IndentingNewLine]", 
+    RowBox[{"XMLElement", "[", 
+     RowBox[{"\"\<Shape\>\"", ",", 
+      RowBox[{"{", "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"XMLElement", "[", 
+         RowBox[{"\"\<IndexedFaceSet\>\"", ",", "__"}], "]"}], ",", "___"}], 
+       "}"}]}], "]"}], ",", "\[IndentingNewLine]", "\[Infinity]"}], 
+   "\[IndentingNewLine]", "]"}]}]], "Input",
+ InitializationCell->
+  True,ExpressionUUID->"50a16407-2acc-4caf-8ac3-4fc318f99094"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["getLinesFromX3D", "Subsubsection",ExpressionUUID->"d1e12554-c880-467b-a567-3d719fe50ecb"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"getLinesFromX3D", "[", "x3dInputInXML_", "]"}], ":=", 
+  RowBox[{"Cases", "[", "\[IndentingNewLine]", 
+   RowBox[{"x3dInputInXML", ",", "\[IndentingNewLine]", 
+    RowBox[{"XMLElement", "[", 
+     RowBox[{"\"\<Shape\>\"", ",", 
+      RowBox[{"{", "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"XMLElement", "[", 
+         RowBox[{"\"\<IndexedLineSet\>\"", ",", "__"}], "]"}], ",", "___"}], 
+       "}"}]}], "]"}], ",", "\[IndentingNewLine]", "\[Infinity]"}], 
+   "\[IndentingNewLine]", "]"}]}]], "Input",
+ InitializationCell->
+  True,ExpressionUUID->"838a26f1-b263-43e6-925a-ed88b0f48559"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["plotToXML", "Subsubsection",ExpressionUUID->"34a8a027-ff19-4d59-bd8f-ec4f5c493dbf"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"plotToXML", "[", "plot_", "]"}], ":=", 
+  RowBox[{"ImportString", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"ExportString", "[", "\[IndentingNewLine]", 
+     RowBox[{"plot", "\[IndentingNewLine]", ",", "\"\<X3D\>\""}], "]"}], 
+    "\[IndentingNewLine]", ",", "\"\<XML\>\"", ",", 
+    RowBox[{"\"\<ReadDTD\>\"", "\[Rule]", "False"}]}], "]"}]}]], "Input",
+ InitializationCell->
+  True,ExpressionUUID->"0bdb6e4c-db7a-42c9-ab93-51c736f1f15c"],
+
+Cell[TextData[{
+ "Takes a 3D plot and renders it into x3d format (\[OpenCurlyQuote]exporting\
+\[CloseCurlyQuote] it into a string so that it doesn\[CloseCurlyQuote]t pass \
+through a temporary file) and then re-imports the result as an XML object.\n\n\
+This trick worked flawlessly as of v10.1, but somewhere along the line \
+something broke.\n - In v11.2, the default importer produces a  ",
+ Cell[BoxData[
+  TemplateBox[{
+   "XMLGetString","nfprserr",
+    "\"Required attribute 'version' was not provided at Line: 5 Character: \
+85.\"",2,291,14,27062596294228522518,"Local","XML`Parser`XMLGetString"},
+   "MessageTemplate2"]], "MSG",ExpressionUUID->
+  "27ff5bce-31a9-401b-9dc8-5facd0afeea2"],
+ " error.\n - In v11.3 and v12.0, the default importer claims that the \
+doctype declaration in line 2 of the x3d file is \
+\[OpenCurlyDoubleQuote]malformed\[CloseCurlyDoubleQuote] or uses an \
+\[OpenCurlyDoubleQuote]unsupported\[CloseCurlyDoubleQuote] protocol (i.e. \
+http).\n The setting of \
+\[OpenCurlyDoubleQuote]ReadDTD\[CloseCurlyDoubleQuote]\[RightArrow]False \
+seems to eliminate both of these problems, but they feel like bugs in \
+Mathematica."
+}], "Text",ExpressionUUID->"65d520d4-700a-4bfe-8896-6762ff848691"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["x3dCanvas", "Subsubsection",ExpressionUUID->"ff49d2b0-6e1a-490d-931e-94e97f0c2fae"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"x3dCanvas", "=", 
+   RowBox[{"ImportString", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+     "\"\<<?xml version='1.0' encoding='UTF-8'?>\n<!DOCTYPE X3D PUBLIC \
+'ISO//Web3D//DTD X3D 3.0//EN' \
+'http://www.web3d.org/specifications/x3d-3.0.dtd'>\n<X3D profile='Immersive'\n\
+    xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance'\n    \
+xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.0.\
+xsd'>\n <head>\n  <meta name='creator' content='Emilio Pisanty' />\n  <meta \
+name='created' content='\>\"", "<>", 
+      RowBox[{"DateString", "[", "]"}], "<>", 
+      "\"\<' />\n </head>\n <Scene />\n</X3D>\>\""}], "\[IndentingNewLine]", 
+     ",", "\"\<XML\>\"", ",", 
+     RowBox[{"\"\<ReadDTD\>\"", "\[Rule]", "False"}]}], "]"}]}], 
+  ";"}]], "Input",
+ InitializationCell->
+  True,ExpressionUUID->"0ad253a2-2a80-4e46-8e19-11da9962ddaa"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["x3dScene", "Subsubsection",ExpressionUUID->"35efd09c-9cbb-49fc-9f4f-3ac2459dbb25"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"x3dScene", "[", "ListOfXMLElements_", "]"}], "=", 
+   RowBox[{"ReplaceAll", "[", "\[IndentingNewLine]", 
+    RowBox[{"x3dCanvas", ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"XMLElement", "[", 
+       RowBox[{"\"\<Scene\>\"", ",", 
+        RowBox[{"{", "}"}], ",", 
+        RowBox[{"{", "}"}]}], "]"}], "\[Rule]", 
+      RowBox[{"XMLElement", "[", 
+       RowBox[{"\"\<Scene\>\"", ",", 
+        RowBox[{"{", "}"}], ",", "ListOfXMLElements"}], "]"}]}]}], 
+    "\[IndentingNewLine]", "]"}]}], ";"}]], "Input",
+ InitializationCell->
+  True,ExpressionUUID->"d0cc6622-52a9-4f4b-a06b-b81e8ce35e18"],
+
+Cell[BoxData[
+ RowBox[{"x3dScene", "[", 
+  RowBox[{"{", 
+   RowBox[{"XMLElement", "[", 
+    RowBox[{"\"\<ExampleElement\>\"", ",", 
+     RowBox[{"{", "}"}], ",", 
+     RowBox[{"{", "}"}]}], "]"}], "}"}], "]"}]], "Input",ExpressionUUID->\
+"c6407d24-9d6a-4f10-a87f-9becf44f6f49"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["cleanX3Dscene", "Subsubsection",ExpressionUUID->"46113913-b646-457c-a4cd-fdaadd295b55"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"cleanX3Dscene", "[", "x3dInputInXML_", "]"}], ":=", 
+  RowBox[{"DeleteCases", "[", "\[IndentingNewLine]", 
+   RowBox[{"x3dInputInXML", ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"XMLElement", "[", 
+      RowBox[{"\"\<PointLight\>\"", ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"\"\<color\>\"", "\[Rule]", "_"}], ",", 
+         RowBox[{"\"\<location\>\"", "\[Rule]", "_"}], ",", 
+         RowBox[{"\"\<radius\>\"", "\[Rule]", "\"\<10000\>\""}]}], "}"}], ",", 
+       RowBox[{"{", "}"}]}], "]"}], "|", 
+     RowBox[{"XMLElement", "[", 
+      RowBox[{"\"\<Background\>\"", ",", 
+       RowBox[{"{", 
+        RowBox[{"\"\<skyColor\>\"", "\[Rule]", "\"\<0. 0. 0.\>\""}], "}"}], 
+       ",", 
+       RowBox[{"{", "}"}]}], "]"}]}], ",", "\[IndentingNewLine]", 
+    "\[Infinity]"}], "\[IndentingNewLine]", "]"}]}]], "Input",
+ InitializationCell->
+  True,ExpressionUUID->"3222d1ed-510e-4cc7-aec6-052b111d32f0"]
+}, Open  ]]
+},
+WindowSize->{956, 708},
+WindowMargins->{{Automatic, 183}, {13, Automatic}},
+FrontEndVersion->"11.2 for Microsoft Windows (64-bit) (September 10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 280, 5, 124, "Input",ExpressionUUID->"ae11e8ba-dd62-4813-b254-c2fcd685bbf3"],
+Cell[841, 27, 648, 19, 32, "Input",ExpressionUUID->"f300b5fd-ae2a-49b2-ba28-3dd1cdd5c68d"],
+Cell[CellGroupData[{
+Cell[1514, 50, 393, 10, 28, "Input",ExpressionUUID->"5c3665b5-fb7c-4b5b-919e-7ce4cd7d7b23"],
+Cell[1910, 62, 220, 4, 32, "Output",ExpressionUUID->"2989b8b2-d89d-40db-b2d2-3e80b5a9b577"]
+}, Open  ]],
+Cell[2145, 69, 210, 4, 67, "Input",ExpressionUUID->"54e10095-680d-4093-b4b7-37c8f55ad33b"],
+Cell[CellGroupData[{
+Cell[2380, 77, 1157, 25, 238, "Input",ExpressionUUID->"85e68d4b-346f-4aae-a7e1-876f7f314e89"],
+Cell[3540, 104, 246, 4, 32, "Output",ExpressionUUID->"9cc4d3db-3cd0-4f9f-9182-afec4a4b75c7"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3823, 113, 1100, 25, 219, "Input",ExpressionUUID->"b4a8cb0c-88de-4377-8362-296a1100a255"],
+Cell[4926, 140, 248, 5, 32, "Output",ExpressionUUID->"458c5aa9-ac42-43a6-948b-74cf1c1b67ef"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5211, 150, 695, 15, 143, "Input",ExpressionUUID->"879ef5c5-abd5-49f5-8c53-4ca2ae17119f"],
+Cell[5909, 167, 222, 4, 32, "Output",ExpressionUUID->"28070c5d-fc83-4529-b1f0-b27eb43ad856"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6168, 176, 746, 17, 143, "Input",ExpressionUUID->"93de611e-5000-4326-8ac0-f56b2bc356df"],
+Cell[6917, 195, 224, 4, 32, "Output",ExpressionUUID->"83fa3336-e820-41da-8552-afe058f817fe"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7178, 204, 829, 18, 181, "Input",ExpressionUUID->"99d1e039-8a9a-47b7-9ff7-dcbb4755273c"],
+Cell[8010, 224, 198, 4, 32, "Output",ExpressionUUID->"1e1f9449-5bfa-4e2d-82bc-2db52a202706"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8245, 233, 1000, 24, 143, "Input",ExpressionUUID->"e01478e1-e266-4b34-98ce-0cc6ab1dba1f"],
+Cell[9248, 259, 252, 5, 32, "Output",ExpressionUUID->"8247f3e7-4252-49df-a87f-4e48215a0a46"]
+}, Open  ]],
+Cell[9515, 267, 234, 5, 86, "Input",ExpressionUUID->"b718875f-5757-4de0-ace3-e2546d876d06"],
+Cell[CellGroupData[{
+Cell[9774, 276, 900, 20, 181, "Input",ExpressionUUID->"b2b745dc-d605-4bec-82b1-724e10061a82"],
+Cell[10677, 298, 198, 4, 32, "Output",ExpressionUUID->"62af570f-ab79-4971-92f3-0ebcc58d7cdc"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10912, 307, 1273, 28, 257, "Input",ExpressionUUID->"751bb289-ac0d-4528-aff5-7d73f1bad27a"],
+Cell[12188, 337, 220, 4, 32, "Output",ExpressionUUID->"e2acec7f-3ccd-47a2-a587-fb21a746ddd4"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12445, 346, 1372, 31, 257, "Input",ExpressionUUID->"c59432b6-c57a-435c-ad0c-173fddaec244"],
+Cell[13820, 379, 193, 3, 32, "Output",ExpressionUUID->"70df5045-aa7c-4bda-9018-68459ffec232"]
+}, Open  ]],
+Cell[14028, 385, 353, 7, 143, "Input",ExpressionUUID->"1e4ff531-9454-42eb-9d5e-51d6df77f722"],
+Cell[14384, 394, 373, 9, 44, "Input",ExpressionUUID->"51722d19-2643-42ba-b754-f7bfd3834681",
+ InitializationCell->True],
+Cell[14760, 405, 2081, 49, 292, "Input",ExpressionUUID->"549a0a06-10eb-47b7-af27-00e7e9229ae2",
+ InitializationCell->True],
+Cell[16844, 456, 1125, 26, 121, "Input",ExpressionUUID->"18fa0968-6e36-4efe-af94-c47917818219",
+ InitializationCell->True],
+Cell[CellGroupData[{
+Cell[17994, 486, 98, 0, 44, "Subsubsection",ExpressionUUID->"3acb2dde-0b46-41ce-818c-70cfa9339d20"],
+Cell[18095, 488, 646, 15, 121, "Input",ExpressionUUID->"50a16407-2acc-4caf-8ac3-4fc318f99094",
+ InitializationCell->True]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18778, 508, 95, 0, 44, "Subsubsection",ExpressionUUID->"d1e12554-c880-467b-a567-3d719fe50ecb"],
+Cell[18876, 510, 643, 15, 121, "Input",ExpressionUUID->"838a26f1-b263-43e6-925a-ed88b0f48559",
+ InitializationCell->True]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19556, 530, 89, 0, 44, "Subsubsection",ExpressionUUID->"34a8a027-ff19-4d59-bd8f-ec4f5c493dbf"],
+Cell[19648, 532, 484, 10, 121, "Input",ExpressionUUID->"0bdb6e4c-db7a-42c9-ab93-51c736f1f15c",
+ InitializationCell->True],
+Cell[20135, 544, 1218, 21, 210, "Text",ExpressionUUID->"65d520d4-700a-4bfe-8896-6762ff848691"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21390, 570, 89, 0, 44, "Subsubsection",ExpressionUUID->"ff49d2b0-6e1a-490d-931e-94e97f0c2fae"],
+Cell[21482, 572, 904, 19, 273, "Input",ExpressionUUID->"0ad253a2-2a80-4e46-8e19-11da9962ddaa",
+ InitializationCell->True]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22423, 596, 88, 0, 44, "Subsubsection",ExpressionUUID->"35efd09c-9cbb-49fc-9f4f-3ac2459dbb25"],
+Cell[22514, 598, 652, 16, 102, "Input",ExpressionUUID->"d0cc6622-52a9-4f4b-a06b-b81e8ce35e18",
+ InitializationCell->True],
+Cell[23169, 616, 277, 7, 28, "Input",ExpressionUUID->"c6407d24-9d6a-4f10-a87f-9becf44f6f49"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[23483, 628, 93, 0, 44, "Subsubsection",ExpressionUUID->"46113913-b646-457c-a4cd-fdaadd295b55"],
+Cell[23579, 630, 966, 22, 141, "Input",ExpressionUUID->"3222d1ed-510e-4cc7-aec6-052b111d32f0",
+ InitializationCell->True]
+}, Open  ]]
+}
+]
+*)
+
