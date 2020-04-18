@@ -1,0 +1,319 @@
+<html> 
+<head> 
+<title>The imaginary part of the high-harmonic cutoff: 3D figures and Supplementary Material</title> 		
+<meta name="author" content="Emilio Pisanty, Marcelo F. Ciappina and Maciej Lewenstein">	
+
+<meta name="keywords" content="Strong-field approximation, strong-field physics, quantum orbits, riemann surface, analytical continuation, 3D graphics, x3dom">
+<meta name="description" content="3D figures and supplementary material for the paper 'The imaginary part of the high-harmonic cutoff'">
+
+<!-- X3DOM inclusions -->
+<script type='text/javascript' src='x3dom.js'></script> 
+<link rel='stylesheet' type='text/css' href='x3dom.css'></link> 
+
+<style type="text/css">
+#central-column { 
+  background-color: #fffff;
+  width: 900px;
+  margin: 0px auto;
+  height: 100%;
+  text-align: left;
+  padding-bottom: 150px;
+  }
+#content {
+  margin-top: 50px;    
+  margin-left: 30px;
+  width: 800px;
+  }
+body {
+  background: #ffffff url(background.png) no-repeat scroll center top;
+  color: #303030;
+  font-family: Helvetica,Tahoma,sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-size: 84%;
+  font-size-adjust: none;
+  font-stretch: normal;
+  line-height: 1.4em;
+}
+h1 {
+  line-height: 1.3em;
+}
+li.li-1 {
+  margin: 5px 5px;
+}
+ul.li-2 {
+  margin: 5px 5px;
+}
+x3d{
+  background: rgba(240, 240, 240, 0.4);
+  border: 1px solid black;
+}
+.viewpoint-buttons{
+  margin: 15px 0;
+  display: inline-block;
+}
+
+.figure-description{
+  padding-bottom: 10px;
+}
+
+#3D-prints{
+  padding-top: 50px;
+}
+
+#footer{
+  padding-top: 400px;
+  padding-bottom: 10px;
+}
+
+.citation{
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+#mathjax-own-commands{
+  display: none;
+}
+
+a:link {
+    color: #000099;
+    text-decoration: none;
+}
+a:visited {
+    color: #000033;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+.slider {
+}
+</style>
+
+</head> 
+<body>
+
+<div id="central-column">
+<div id="content">
+    
+<h1>The imaginary part of the high-harmonic cutoff: 3D figures and Supplementary Material</h1>
+<div id="introduction">
+<p>
+This page contains 3D figures and the Supplementary Material for the paper 
+  <p class="citation">
+    <em>The imaginary part of the high-harmonic cutoff</em>. 
+    E. Pisanty, M.F. Ciappina and M. Lewenstein.
+    <em>J. Phys. Photonics</em> (submitted),
+    <a href="http://arxiv.org/abs/2003.00277" >arXiv:2003.00277</a>,
+    (2020).
+  </p>
+</p>
+<p>
+You should see six manipulatable 3D figures below. This document uses WebGL and X3DOM to run, and should work on recent versions of Chrome, Firefox, Safari and Edge, as well as Internet Explorer.
+To check whether your browser supports X3DOM <a href="https://www.x3dom.org/check/" >click here</a>; for more browser information <a href="https://www.x3dom.org/contact/" >see here</a>.
+</p>
+<p>
+This document is available at <a href="https://imaginarycutoffs.github.io">imaginarycutoffs.github.io</a> and as a bundle for download as <a href="https://doi.org/10.5281/zenodo.nnnnnnn">doi:10.5281/zenodo.nnnnnnn</a>. 
+If downloaded and viewed locally, your browser should be configured to allow access to local files.
+The code used to produce these figures is available as <a href="https://doi.org/10.5281/zenodo.3692562">doi:10.5281/zenodo.3692562</a>.
+</p>
+</div>
+
+<div id="navigation-instructions">
+<div id="navigation-title">
+  <h3>Navigation</h3>
+</div>
+<div id="navigation-content">
+<p>
+Use the left mouse button to rotate the object and the middle mouse button to pan. Zoom with the mouse wheel or the right mouse button. Double click to set the center of rotation.
+</p>
+</div>
+</div>
+
+<div id="contents">
+<div id="contents-title">
+  <h3>Contents</h3>
+</div>
+<div id="contents-content">
+<p>
+<ul>
+  <li><a href="#figure-1ab">3D Figure 1(a,b)</a></li>
+  <li><a href="#figure-1c">3D Figure 1(c)</a></li>
+  <li><a href="#figure-1d">3D Figure 1(d)</a></li>
+  <li><a href="#figure-1e">3D Figure 1(e)</a></li>
+  <li><a href="#figure-1f">3D Figure 1(f)</a></li>
+  <li><a href="#figure-2" >3D Figure 2</a></li>
+  <li><a href="#3D-prints" >3D-printable models </a></li>
+</ul>
+</p>
+</div>
+</div>
+
+
+
+
+<div class="figure-container" id="figure-1ab">
+<div class="figure-title" id="figure-1ab-title">
+  <h2>3D Figure 1(a,b)</h2>
+</div>
+<div class="3dfigure" id="figure-1ab-figure">
+<x3d width='800px' height='500px'>
+  <scene>
+   <Viewpoint position="32 112 96" orientation="-0.55774 -0.46998 -0.68414 2.02850" centerOfRotation="18 0 70"  description="camera"></Viewpoint>
+   <PointLight id='point' on='TRUE' intensity='0.5' color='1 1 1' location='0 0 50' radius='150' >  </PointLight>
+   <PointLight id='point' on='TRUE' intensity='0.5' color='1 1 1' location='30 0 75' radius='150' >  </PointLight>
+   <Inline namespace="figureOa" url="figureOa.x3d" />
+  </scene>
+</x3d>
+</div>
+</div> 
+
+
+<div class="figure-container" id="figure-1c">
+<div class="figure-title" id="figure-1c-title">
+  <h2>3D Figure 1(c)</h2>
+</div>
+<div class="3dfigure" id="figure-1c-figure">
+<x3d width='800px' height='500px'>
+  <scene>
+   <Viewpoint position="50 -190 92" orientation="0.99362 0.05594 0.09794 1.12441" centerOfRotation="24. 4.5 4.1"  description="camera"></Viewpoint>
+   <Inline nameSpaceName="figureOc" url="figureOc.x3d" />
+  </scene>
+</x3d>
+</div>
+</div>
+
+
+<div class="figure-container" id="figure-1d">
+<div class="figure-title" id="figure-1d-title">
+  <h2>3D Figure 1(d)</h2>
+</div>
+<div class="3dfigure" id="figure-1d-figure">
+<x3d width='800px' height='500px'>
+  <scene>
+   <Viewpoint position="50 -190 92" orientation="0.99362 0.05594 0.09794 1.12441" centerOfRotation="24. 4.5 4.1"  description="camera"></Viewpoint>
+   <Inline nameSpaceName="figureOd" url="figureOd.x3d" />
+  </scene>
+</x3d>
+</div>
+</div> 
+
+
+<div class="figure-container" id="figure-1e">
+<div class="figure-title" id="figure-1e-title">
+  <h2>3D Figure 1(e)</h2>
+</div>
+<div class="3dfigure" id="figure-1d-figure">
+<x3d width='800px' height='500px'>
+  <scene>
+   <Viewpoint position="50 -190 92" orientation="0.99362 0.05594 0.09794 1.12441" centerOfRotation="24. 4.5 4.1"  description="camera"></Viewpoint>
+   <Inline nameSpaceName="figureOe" url="figureOe.x3d" />
+  </scene>
+</x3d>
+</div>
+</div> 
+
+
+<div class="figure-container" id="figure-1f">
+<div class="figure-title" id="figure-1f-title">
+  <h2>3D Figure 1(f)</h2>
+</div>
+<div class="3dfigure" id="figure-1f-figure">
+<x3d width='800px' height='500px'>
+  <scene>
+   <Viewpoint position="50 -190 92" orientation="0.99362 0.05594 0.09794 1.12441" centerOfRotation="24. 4.5 4.1"  description="camera"></Viewpoint>
+   <Inline nameSpaceName="figureOf" url="figureOf.x3d" />
+  </scene>
+</x3d>
+</div>
+</div> 
+
+
+<div class="figure-container" id="figure-2">
+<div class="figure-title" id="figure-2-title">
+  <h2>3D Figure 2</h2>
+</div>
+<div class="3dfigure" id="figure-2-figure">
+<x3d width='800px' height='500px'>
+  <scene>
+   <Viewpoint position="5.5 3.5 3.0" orientation="0.4267 0.4267 0.7974 1.79533" centerOfRotation="1 3.5 0"  description="camera"></Viewpoint>
+   <Inline namespace="figureP" url="figureP.x3d" />
+  </scene>
+</x3d>
+</div>
+</div> 
+
+
+
+
+<div class="figure-container" id="3D-prints">
+<div class="figure-title" id="3D-prints-title">
+  <h2>3D Prints</h2>
+</div>
+<div class="3dfigure" id="3D-prints-contents">
+<p>
+This section contains 3D-printable models of the figures shown above. 
+<ul>
+<li class="li-1">
+  All of the models in a single zip file:
+  <ul class="li-2">
+    <li><a href="3D prints/3D prints.zip">3D prints.zip</a></li>
+  </ul>
+</li>
+<li class="li-1">
+  The real part of the Riemann-surface topology, as shown in <a href="figure-1ab">3D Figure 1(a,b)</a>:
+  <ul class="li-2">
+    <li>3D Figure 1(a,b): <a href="3D prints/Re(wt).stl">Re(wt).stl</a></li>
+  </ul>
+  A good print size is obtained by taking the file units in mm and then scaling down by 50%.
+</li>
+<li class="li-1">
+  The imaginary part of the Riemann-surface topology, as shown in 3D Figure 1(c-f), including only one orbit per file:
+  <ul class="li-2">
+    <li>3D Figure 1(c): <a href="3D prints/Im(wt) by orbit - 1.stl">Im(wt) by orbit - 1.stl</a></li>
+    <li>3D Figure 1(d): <a href="3D prints/Im(wt) by orbit - 2.stl">Im(wt) by orbit - 2.stl</a></li>
+    <li>3D Figure 1(e): <a href="3D prints/Im(wt) by orbit - 3.stl">Im(wt) by orbit - 3.stl</a></li>
+    <li>3D Figure 1(f): <a href="3D prints/Im(wt) by orbit - 4.stl">Im(wt) by orbit - 4.stl</a></li>
+  </ul class="li-2">
+  A good print size is obtained by taking the file units in mm and then scaling down by 50%.
+</li>
+<li class="li-1">
+  An alternative slicing of the imaginary part of the Riemann surface (shown collectively in 3D Figure 1(c-f)), showing one of the vertical strips of Fig. 5 (and thus only one branch cut) per file:
+  <ul class="li-2">
+    <li>3D Figure 1(c-f): <a href="3D prints/Im(wt) by sector - 1.stl">Im(wt) by sector - 1.stl</a></li>
+    <li>3D Figure 1(c-f): <a href="3D prints/Im(wt) by sector - 2.stl">Im(wt) by sector - 2.stl</a></li>
+    <li>3D Figure 1(c-f): <a href="3D prints/Im(wt) by sector - 3.stl">Im(wt) by sector - 3.stl</a></li>
+    <li>3D Figure 1(c-f): <a href="3D prints/Im(wt) by sector - 4.stl">Im(wt) by sector - 4.stl</a></li>
+    <li>3D Figure 1(c-f): <a href="3D prints/Im(wt) by sector - 5.stl">Im(wt) by sector - 5.stl</a></li>
+  </ul>
+  A good print size is obtained by taking the file units in mm and then scaling down by 50%.
+</li>
+<li class="li-1">
+  The topology of the bicircular-field quantum orbits in <a href="figure-2">3D Figure 2</a>:
+  <ul class="li-2">
+    <li>3D Figure 2: <a href="3D prints/Bicircular topology.stl">Bicircular topology.stl</a></li>
+  </ul>
+  A good print size is obtained by taking the file units in cm and then scaling up by 300%.
+</li>
+</ul>
+</p>
+<p>
+These models should be printable on a variety of technologies, including resin-based SLS and filament-based SLA. Unfortunately, due to quarantine measures in response to the COVID-19 outbreak of early 2020, it has not been possible for the authors to verify that the models can print correctly, so they are provided as is, in the hope that they do.
+</p>
+</div>
+</div> 
+
+
+<div id="footer">
+&copy; Emilio Pisanty, 2020.
+</div>
+	
+</div><!-- #central-column -->
+</div><!-- #content -->
+</body>
+</html>
