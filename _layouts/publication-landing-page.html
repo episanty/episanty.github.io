@@ -45,7 +45,7 @@ To do:
         </div>
         <div class="publications-details-cell value">
             {% for identifier in page.identifiers %} {% if identifier.name=="doi" %}
-            <a class="publication-reference" href="https://dx.doi.org/{{identifier.value}}" target="_blank">
+            <a class="publication-reference" href="https://doi.org/{{identifier.value}}" target="_blank">
                 <span class="publication-journal"> {{ page.journal }} </span>
                 <span class="publication-volume"> {{ page.volume }} </span>
                 <span class="publication-details"> {%if page.number %} no. {{ page.number }},{% endif %} {{page.page}} ({{ page.year }}) </span>

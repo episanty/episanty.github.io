@@ -79,7 +79,7 @@ layout: publications-list-header
         <div class="publication-reference">
             {%if paper.journal %}
             {% for identifier in paper.identifiers %} {% if identifier.name=="doi" %}
-            <a class="publication-reference" href="https://dx.doi.org/{{identifier.value}}" target="_blank">
+            <a class="publication-reference" href="https://doi.org/{{identifier.value}}" target="_blank">
                 <span class="publication-journal"> {{ paper.journal }} </span>
                 <span class="publication-volume"> {{ paper.volume }} </span>
                 <span class="publication-details"> {%if page.number %} no. {{ page.number }},{% endif %} {{paper.page}} ({{ paper.year }}) </span>
