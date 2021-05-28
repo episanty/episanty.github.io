@@ -33,8 +33,12 @@ layout: publications-list-header
 
     {% if display-item == true %}
     
-    
+    {% comment %}
     {% assign this-row-year = paper.year %}
+    {% endcomment %}
+    
+    {% assign this-row-year = paper.publication-date | date: '%Y' %}
+    
     {% if previous-row-year != this-row-year %}
     {% if page.selection == "journal-publications" or page.selection == "all-publications" %}
         <div class="publication-row">
@@ -83,6 +87,11 @@ layout: publications-list-header
                 <span class="publication-journal"> {{ paper.journal }} </span>
                 <span class="publication-volume"> {{ paper.volume }} </span>
                 <span class="publication-details"> {%if page.number %} no. {{ page.number }},{% endif %} {{paper.page}} ({{ paper.year }}) </span>
+                
+                {% comment %}
+                <span class="publication-details"> [ {{ paper.year }} ] [[ {{ paper.publication-date | date: '%Y' }} ]] </span>
+                {% endcomment %}
+                
             </a>
             &ndash;
             {% endif %} {% endfor %}
