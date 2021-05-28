@@ -8,11 +8,6 @@ layout: publications-list-header
     
     {% assign previous-row-year = 2030 %}
     
-    
-    {% comment %}
-    {% assign publications_sorted = site.publications  | sort: 'publication-date' | reverse %}
-    {% endcomment %}
-    
     {% assign publications_sorted = site.publications  | sort: 'publication-date' | sort: 'year' | reverse %}
     
     {% for paper in publications_sorted %}
@@ -37,14 +32,8 @@ layout: publications-list-header
     {% endif %}
 
     {% if display-item == true %}
-    
-    {% comment %}
+        
     {% assign this-row-year = paper.year %}
-    {% assign this-row-year = paper.publication-date | date: '%Y' %}
-    {% endcomment %}
-    
-    {% assign this-row-year = paper.year %}
-    
     {% if previous-row-year != this-row-year %}
     {% if page.selection == "journal-publications" or page.selection == "all-publications" %}
         <div class="publication-row">
@@ -88,20 +77,12 @@ layout: publications-list-header
     </span>
     <span class="publication-sub-row">
         <div class="publication-reference">
-            
-            <span class="publication-details"> {{ paper.publication-date }}, {{ paper.year}} </span>
-            
             {%if paper.journal %}
             {% for identifier in paper.identifiers %} {% if identifier.name=="doi" %}
             <a class="publication-reference" href="https://doi.org/{{identifier.value}}" target="_blank">
                 <span class="publication-journal"> {{ paper.journal }} </span>
                 <span class="publication-volume"> {{ paper.volume }} </span>
                 <span class="publication-details"> {%if page.number %} no. {{ page.number }},{% endif %} {{paper.page}} ({{ paper.year }}) </span>
-                
-                {% comment %}
-                <span class="publication-details"> [ {{ paper.year }} ] [[ {{ paper.publication-date | date: '%Y' }} ]] </span>
-                {% endcomment %}
-                
             </a>
             &ndash;
             {% endif %} {% endfor %}
@@ -145,9 +126,6 @@ layout: publications-list-header
         </div>
     </span>
     <span class="publication-sub-row">
-        
-        <span class="publication-details"> {{ paper.publication-date }}, {{ paper.year}} </span>
-        
         <div class="code-url">
             <a href="https://github.com/{{paper.github-id}}" target="_blank">
                 github.com/{{paper.github-id}}
