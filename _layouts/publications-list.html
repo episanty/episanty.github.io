@@ -12,133 +12,128 @@ layout: publications-list-header
     
     {% for paper in publications_sorted %}
 
-    {% assign display-item = false %}
-    {% if paper.unlisted != "true" %}
-        {% if page.selection == "key-publications" and paper.key-publication == "true" %}
-            {% assign display-item = true %}
+        {% assign display-item = false %}
+        {% if paper.unlisted != "true" %}
+            {% if page.selection == "key-publications" and paper.key-publication == "true" %}
+                {% assign display-item = true %}
+            {% endif %}
+            {% if page.selection == "theses" and paper.type == "thesis" %}
+                {% assign display-item = true %}
+            {% endif %}
+            {% if page.selection == "journal-publications" and paper.type == "journal-paper" %}
+                {% assign display-item = true %}
+            {% endif %}
+            {% if page.selection == "code" and paper.type == "code" %}
+                {% assign display-item = true %}
+            {% endif %}
+            {% if page.selection == "all-publications" %}
+                {% assign display-item = true %}
+            {% endif %}
         {% endif %}
-        {% if page.selection == "theses" and paper.type == "thesis" %}
-            {% assign display-item = true %}
-        {% endif %}
-        {% if page.selection == "journal-publications" and paper.type == "journal-paper" %}
-            {% assign display-item = true %}
-        {% endif %}
-        {% if page.selection == "code" and paper.type == "code" %}
-            {% assign display-item = true %}
-        {% endif %}
-        {% if page.selection == "all-publications" %}
-            {% assign display-item = true %}
-        {% endif %}
-    {% endif %}
 
-    {% if display-item == true %}
-        
-    {% assign this-row-year = paper.year %}
-    {% if previous-row-year != this-row-year %}
-    {% if page.selection == "journal-publications" or page.selection == "all-publications" %}
-        <div class="publication-row">
-            <div class="publication-year-mid-row">
-                {{this-row-year}}
+        {% if display-item == true %}
+
+            {% assign this-row-year = paper.year %}
+            {% if previous-row-year != this-row-year %}
+            {% if page.selection == "journal-publications" or page.selection == "all-publications" %}
+                <div class="publication-row">
+                    <div class="publication-year-mid-row">
+                        {{this-row-year}}
+                    </div>
+                </div>
+            {% endif %}
+            {% endif %}
+            {% assign previous-row-year = this-row-year %}
+
+
+
+            <div class="publication-row">
+
+            <div class="publication-thumbnail">
+            <span>
+                <a  href="{{paper.url}}">
+                    <img src="/publications/thumbnails/{{ paper.id | remove: '/publications/' | remove: 'code/' }}-small.png" />
+                </a>
+            </span>
             </div>
-        </div>
-    {% endif %}
-    {% endif %}
-    {% assign previous-row-year = this-row-year %}
-    
 
-
-
-    
-    
-    <div class="publication-row">
-    
-    <div class="publication-thumbnail">
-    <span>
-        <a  href="{{paper.url}}">
-            <img src="/publications/thumbnails/{{ paper.id | remove: '/publications/' | remove: 'code/' }}-small.png" />
-        </a>
-    </span>
-    </div>
-    
-    {% if paper.type == "journal-paper" or paper.type == "thesis" %}
-    <div class="publication-details-cell">
-    <div class="publication-details-row">
-    <span class="publication-sub-row">
-        <div class="publication-title">
-            <a class="publication-title" href="{{paper.url}}">
-                {{ paper.title }}
-            </a>
-        </div>
-    </span>
-    <span class="publication-sub-row">
-        <div class="publication-authors">
-            {{ paper.author }}
-        </div>
-    </span>
-    <span class="publication-sub-row">
-        <div class="publication-reference">
-            {%if paper.journal %}
-            {% for identifier in paper.identifiers %} {% if identifier.name=="doi" %}
-            <a class="publication-reference" href="https://doi.org/{{identifier.value}}" target="_blank">
-                <span class="publication-journal"> {{ paper.journal }} </span>
-                <span class="publication-volume"> {{ paper.volume }} </span>
-                <span class="publication-details"> {%if page.number %} no. {{ page.number }},{% endif %} {{paper.page}} ({{ paper.year }}) </span>
-            </a>
-            &ndash;
-            {% endif %} {% endfor %}
+            {% if paper.type == "journal-paper" or paper.type == "thesis" %}
+                <div class="publication-details-cell">
+                <div class="publication-details-row">
+                <span class="publication-sub-row">
+                    <div class="publication-title">
+                        <a class="publication-title" href="{{paper.url}}">
+                            {{ paper.title }}
+                        </a>
+                    </div>
+                </span>
+                <span class="publication-sub-row">
+                    <div class="publication-authors">
+                        {{ paper.author }}
+                    </div>
+                </span>
+                <span class="publication-sub-row">
+                    <div class="publication-reference">
+                        {%if paper.journal %}
+                        {% for identifier in paper.identifiers %} {% if identifier.name=="doi" %}
+                        <a class="publication-reference" href="https://doi.org/{{identifier.value}}" target="_blank">
+                            <span class="publication-journal"> {{ paper.journal }} </span>
+                            <span class="publication-volume"> {{ paper.volume }} </span>
+                            <span class="publication-details"> {%if page.number %} no. {{ page.number }},{% endif %} {{paper.page}} ({{ paper.year }}) </span>
+                        </a>
+                        &ndash;
+                        {% endif %} {% endfor %}
+                        {% endif %}
+                        {%if paper.type == "thesis" %}
+                        <a class="publication-reference" href="{{paper.thesis-url}}" target="_blank">
+                            <span class="thesis-reference"> {{ paper.thesis-reference }} </span>
+                        </a>
+                        &ndash;
+                        {% endif %}
+                        {% for identifier in paper.identifiers %} {% if identifier.name=="arXiv id" %}
+                            <a class="publication-arxiv-link" href="https://arxiv.org/abs/{{identifier.value}}" target="_blank">arXiv:{{identifier.value}}</a>
+                            &ndash;
+                        {% endif %} {% endfor %}
+                        {% for identifier in paper.identifiers %} {% if identifier.name == "handle" and paper.type != "thesis" %}
+                            <a class="publication-handle-link" href="http://hdl.handle.net/{{identifier.value}}" target="_blank">handle:{{identifier.value}}</a>
+                            &ndash;
+                        {% endif %} {% endfor %}
+                        <a class="publication-pdf" href="/publications/{{paper.pdf-filename}}" target="_blank"> 
+                            <i class="far fa-file-pdf"></i> pdf
+                        </a>
+                    </div>
+                </span>
+                </div>
+                </div>
             {% endif %}
-            {%if paper.type == "thesis" %}
-            <a class="publication-reference" href="{{paper.thesis-url}}" target="_blank">
-                <span class="thesis-reference"> {{ paper.thesis-reference }} </span>
-            </a>
-            &ndash;
+
+            {% if paper.type == "code" %}
+                <div class="publication-details-cell">
+                <div class="publication-details-row">
+                <span class="publication-sub-row">
+                    <div class="publication-title">
+                        <a class="publication-title" href="{{paper.url}}">
+                            {{ paper.title }}
+                        </a>
+                    </div>
+                </span>
+                <span class="publication-sub-row">
+                    <div class="publication-authors">
+                        {{ paper.author }}
+                    </div>
+                </span>
+                <span class="publication-sub-row">
+                    <div class="code-url">
+                        <a href="https://github.com/{{paper.github-id}}" target="_blank">
+                            github.com/{{paper.github-id}}
+                        </a>
+                    </div>
+                </span>
+                </div>
+                </div>
             {% endif %}
-            {% for identifier in paper.identifiers %} {% if identifier.name=="arXiv id" %}
-                <a class="publication-arxiv-link" href="https://arxiv.org/abs/{{identifier.value}}" target="_blank">arXiv:{{identifier.value}}</a>
-                &ndash;
-            {% endif %} {% endfor %}
-            {% for identifier in paper.identifiers %} {% if identifier.name == "handle" and paper.type != "thesis" %}
-                <a class="publication-handle-link" href="http://hdl.handle.net/{{identifier.value}}" target="_blank">handle:{{identifier.value}}</a>
-                &ndash;
-            {% endif %} {% endfor %}
-            <a class="publication-pdf" href="/publications/{{paper.pdf-filename}}" target="_blank"> 
-                <i class="far fa-file-pdf"></i> pdf
-            </a>
-        </div>
-    </span>
-    </div>
-    </div>
-    {% endif %}
 
-    {% if paper.type == "code" %}
-    <div class="publication-details-cell">
-    <div class="publication-details-row">
-    <span class="publication-sub-row">
-        <div class="publication-title">
-            <a class="publication-title" href="{{paper.url}}">
-                {{ paper.title }}
-            </a>
-        </div>
-    </span>
-    <span class="publication-sub-row">
-        <div class="publication-authors">
-            {{ paper.author }}
-        </div>
-    </span>
-    <span class="publication-sub-row">
-        <div class="code-url">
-            <a href="https://github.com/{{paper.github-id}}" target="_blank">
-                github.com/{{paper.github-id}}
-            </a>
-        </div>
-    </span>
-    </div>
-    </div>
-    {% endif %}
-    
-    </div>
-
-
-    {% endif %}
+            </div>
+        {% endif %}
     {% endfor %}
 </div>
