@@ -23,7 +23,7 @@ layout: publications-list-header
         {% assign publicationsFiltered = publicationsWithoutUnlisted %}
     {% endif %}
         
-    {% assign years = publicationsFiltered  | where_exp: 'publicationsPage', 'publicationsPage.unlisted != "true" ' | group_by: 'year' %}
+    {% assign years = publicationsFiltered | group_by: 'year' %}
     {% assign yearsSorted = years | sort: 'name' | reverse %}
     
     {% for yearIndexed in yearsSorted %}
