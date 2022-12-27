@@ -84,9 +84,6 @@ layout: publications-list-header
                 </span>
                 <span class="publication-sub-row">
                     <div class="publication-reference">
-                        {{ paper.publication-date }}
-                        {{ paper.year }}
-                        {{ display-item }}
 
                         {%if paper.journal %}
                         {% for identifier in paper.identifiers %} {% if identifier.name=="doi" %}
