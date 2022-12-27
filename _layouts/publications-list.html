@@ -7,21 +7,18 @@ layout: publications-list-header
     
     {% assign publicationsWithoutUnlisted = site.publications | where_exp: 'publicationsPage', 'publicationsPage.unlisted != "true" ' %}
     
-    {% if page.selection == "key-publications" %}
-        {% assign publicationsFiltered = publicationsWithoutUnlisted | where_exp: 'paper', 'paper.key-publication=="true"' %}
-    {% endif %}
-    {% if page.selection == "theses" %}
-        {% assign publicationsFiltered = publicationsWithoutUnlisted | where_exp: 'paper', 'paper.type == "thesis"' %}
-    {% endif %}
-    {% if page.selection == "journal-publications" %}
-        {% assign publicationsFiltered = publicationsWithoutUnlisted | where_exp: 'paper', 'paper.type == "journal-paper"' %}
-    {% endif %}
-    {% if page.selection == "code" %}
-        {% assign publicationsFiltered = publicationsWithoutUnlisted | where_exp: 'paper', 'paper.type == "code"' %}
-    {% endif %}
-    {% if page.selection == "all-publications" %}
-        {% assign publicationsFiltered = publicationsWithoutUnlisted %}
-    {% endif %}
+    {% case page.selection %}
+        {% when "key-publications" %}
+            {% assign publicationsFiltered = publicationsWithoutUnlisted | where_exp: 'paper', 'paper.key-publication == "true"' %}
+        {% when "theses" %}
+            {% assign publicationsFiltered = publicationsWithoutUnlisted | where_exp: 'paper', 'paper.type == "thesis"' %}
+        {% when "journal-publications" %}
+            {% assign publicationsFiltered = publicationsWithoutUnlisted | where_exp: 'paper', 'paper.type == "journal-paper"' %}
+        {% when "code" %}
+            {% assign publicationsFiltered = publicationsWithoutUnlisted | where_exp: 'paper', 'paper.type == "code"' %}
+        {% when "all-publications" %}
+            {% assign publicationsFiltered = publicationsWithoutUnlisted %}
+    {% endcase %}
         
     {% assign years = publicationsFiltered | group_by: 'year' %}
     {% assign yearsSorted = years | sort: 'name' | reverse %}
