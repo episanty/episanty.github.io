@@ -26,24 +26,6 @@ layout: publications-list-header
     {% assign years = publicationsFiltered  | where_exp: 'publicationsPage', 'publicationsPage.unlisted != "true" ' | group_by: 'year' %}
     {% assign yearsSorted = years | sort: 'name' | reverse %}
     
-    {% comment %}
-    {% for yearIndexed in yearsSorted %}
-      <li>{{ yearIndexed.name }}
-        <ul>
-          {% assign publicationsInYearSorted = yearIndexed.items | sort: 'publication-date' | reverse  %}
-          {% for paper in publicationsInYearSorted %}
-          <li>
-              {{ paper.publication-date }}
-              {{ paper.year }}
-              {{ paper.title }}
-          </li>
-          {% endfor %}
-        </ul>
-      </li>
-    {% endfor %}
-    {% endcomment %}
-    
-    
     {% for yearIndexed in yearsSorted %}
         {% if page.selection == "journal-publications" or page.selection == "all-publications" %}
             <div class="publication-row">
