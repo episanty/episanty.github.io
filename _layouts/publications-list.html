@@ -18,10 +18,11 @@ layout: publications-list-header
     
     
     
-    {% assign years = site.publications | group_by: 'year' %}
+    {% assign years = site.publications  | where_exp: 'publicationsPage', 'publicationsPage.unlisted != "true" ' | group_by: 'year' %}
     {% assign yearsSorted = years | sort: 'name' | reverse %}
     
     {% comment %}
+    {% endcomment %}
     {% for yearIndexed in yearsSorted %}
       <li>{{ yearIndexed.name }}
         <ul>
@@ -30,19 +31,19 @@ layout: publications-list-header
           <li>
               {{ paper.publication-date }}
               {{ paper.year }}
-              {{ paper.title }}</li>
+              {{ paper.title }}
+          </li>
           {% endfor %}
         </ul>
       </li>
     {% endfor %}
-    {% endcomment %}
     
     
     {% for yearIndexed in yearsSorted %}
         {% if page.selection == "journal-publications" or page.selection == "all-publications" %}
             <div class="publication-row">
                 <div class="publication-year-mid-row">
-                    {{ yearIndexed.name }}
+                    year: ({{ yearIndexed.name }})
                 </div>
             </div>
         {% endif %}
