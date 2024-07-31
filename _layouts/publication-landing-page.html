@@ -47,6 +47,24 @@ layout: default
         </div>
     </div>
     {% endif %}
+    {%if page.type == "book-chapter" %}
+    <div class="publication-details-row" id="publication-reference">
+        <div class="publications-details-cell key">
+            reference:
+        </div>
+        <div class="publications-details-cell value">
+            {% for identifier in page.identifiers %} {% if identifier.name=="doi" %}
+                In 
+                <a class="publication-reference" href="https://doi.org/{{identifier.value}}" target="_blank">
+                <span class="publication-booktitle"> {{ page.booktitle }} </span>
+                <span class="publication-editor"> ({{ page.editor }}) </span>
+                <span class="publication-pages"> {{ page.pages }} </span>
+                <span class="publication-details"> {%if page.number %} no. {{ page.number }},{% endif %} {{page.page}} ({{page.publisher}}, {{ page.year }}) </span>
+                </a>
+            {% endif %} {% endfor %}
+        </div>
+    </div>
+    {% endif %}
     {% if page.publication-date %}
     <div class="publication-details-row" id="publication-date">
         <div class="publications-details-cell key">

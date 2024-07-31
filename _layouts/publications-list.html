@@ -46,7 +46,7 @@ layout: publications-list-header
             </div>
 
 
-            {% if paper.type == "journal-paper" or paper.type == "thesis" %}
+            {% if paper.type == "journal-paper" or paper.type == "book-chapter" or paper.type == "thesis" %}
                 <div class="publication-details-cell">
                 <div class="publication-details-row">
                 <span class="publication-sub-row">
@@ -74,6 +74,19 @@ layout: publications-list-header
                         &ndash;
                         {% endif %} {% endfor %}
                         {% endif %}
+                        
+                        {%if paper.type == "book-chapter" %}
+                        {% for identifier in paper.identifiers %} {% if identifier.name=="doi" %}
+                        In <a class="publication-reference" href="https://doi.org/{{identifier.value}}" target="_blank">
+                            <span class="publication-booktitle"> {{ paper.booktitle }} </span>
+                            <span class="publication-editor"> ({{ paper.editor }}) </span>
+                            <span class="publication-pages"> {{ paper.pages }} </span>
+                            <span class="publication-details"> {%if page.number %} no. {{ page.number }},{% endif %} {{paper.page}} ({{paper.publisher}}, {{ paper.year }}) </span>
+                        </a>
+                        &ndash;
+                        {% endif %} {% endfor %}
+                        {% endif %}
+                        
                         {%if paper.type == "thesis" %}
                         <a class="publication-reference" href="{{paper.thesis-url}}" target="_blank">
                             <span class="thesis-reference"> {{ paper.thesis-reference }} </span>
