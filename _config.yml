@@ -13,6 +13,9 @@ collections:
   gallery:
     output: true
     permalink: /gallery/:path
+  group:
+    output: true
+    permalink: /group/:path
 
 defaults:
   - scope:
